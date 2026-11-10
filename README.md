@@ -167,7 +167,8 @@ ORDER BY planned_kickoff;
 
 ### NWSL
 
-You pass seasons as years. The worker looks up the platform's opaque ids
+You pass seasons as years. The platform publishes player xG from 2026 onward;
+for earlier seasons `xg` is `NULL`. The worker looks up the platform's opaque ids
 (`nwsl::Football_Season::<hex>`) from its competitions and seasons endpoints,
 and never hard-codes them.
 
@@ -176,7 +177,7 @@ SELECT position, team_name, points, form, qualification
 FROM us_soccer.nwsl.current_standings
 ORDER BY position;
 
-SELECT player_name, team_abbreviation, goals, assists, round(xg, 1) AS xg
+SELECT player_name, team_abbreviation, goals, assists, shots, shots_on_target
 FROM us_soccer.nwsl.player_stats(season := 2025)
 ORDER BY goals DESC
 LIMIT 10;
@@ -307,8 +308,9 @@ That module applies these limits:
   `vgi-us-soccer/<version> (+https://github.com/Query-farm/vgi-us-soccer)`.
 - **Response cache.** A bounded in-process cache keeps responses so that one
   SQL query, and queries close together, don't fetch the same document twice.
-  Entries expire after the source's default TTL: 60 s for MLS, 120 s for NWSL,
-  and 15 minutes for ASA. Competition, season, and directory lists are kept
+  Entries expire after the upstream's `max-age` (NWSL, capped at five minutes)
+  or, without one, the source's default TTL: 60 s for MLS, 120 s for NWSL, and
+  15 minutes for ASA. Competition, season, and directory lists are kept
   for an hour.
 
 VGI clients get freshness metadata only when the upstream allows it. MLS sends

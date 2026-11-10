@@ -300,7 +300,8 @@ class TeamStatsFunction(Scan, TableFunctionGenerator[SeasonArgs]):
 
 
 _PLAYER_LLM = (
-    "Opta-derived season statistics, one row per player: appearances, starts, minutes, goals, assists, xG, "
+    "Opta-derived season statistics, one row per player: appearances, starts, minutes, goals, assists, xG "
+    "(2026 onward; NULL earlier), "
     "shots, key passes, big chances created, passing, defensive actions, discipline, penalties, and "
     "goalkeeper saves and clean sheets. goals_conceded is the team's tally while the player was on the pitch."
 )
@@ -323,7 +324,7 @@ class PlayerStatsFunction(Scan, TableFunctionGenerator[SeasonArgs]):
         examples=[
             (
                 "2025 NWSL Golden Boot race.",
-                "SELECT player_name, team_abbreviation, goals, assists, round(xg, 1) AS xg "
+                "SELECT player_name, team_abbreviation, goals, assists, shots "
                 "FROM us_soccer.nwsl.player_stats(season := 2025) ORDER BY goals DESC LIMIT 10",
             )
         ],
@@ -440,7 +441,7 @@ class MatchEventsFunction(Scan, TableFunctionGenerator[MatchArgs]):
         title="NWSL Match Events",
         llm=(
             "The full event feed for a match id, oldest first, with minute, team, primary player, running "
-            "score, and xG for shots. Filter event_type = 'goal' for goals."
+            "score, and shot outcome. Filter event_type = 'goal' for goals."
         ),
         schema=nwsl.EVENTS_SCHEMA,
         examples=[

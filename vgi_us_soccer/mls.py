@@ -121,7 +121,6 @@ STANDINGS_SCHEMA = pa.schema(
         field("points_per_game", pa.float64(), "Points per match as published by MLS."),
         field("goals_for_per_game", pa.float64(), "Goals scored per match."),
         field("goals_against_per_game", pa.float64(), "Goals conceded per match."),
-        field("qualification", pa.string(), "Qualification marker when MLS publishes one."),
         field("tendency", pa.string(), "Recent movement in the table: up, down, or stable."),
     ]
 )
@@ -215,7 +214,7 @@ _PLAYER_STAT_COLUMNS = [
     field("max_speed_kmh", pa.float64(), "Top speed, km/h."),
     field("goalkeeper_saves", pa.int32(), "Saves; goalkeepers only."),
     field("goals_conceded", pa.int32(), "Goals conceded; goalkeepers only."),
-    field("clean_sheets", pa.int32(), "Clean sheets; goalkeepers only."),
+    field("clean_sheets", pa.int32(), "Goalkeeper clean sheets; NULL per match."),
 ]
 
 PLAYER_STATS_SCHEMA = pa.schema(
@@ -525,7 +524,6 @@ def fetch_standings(
                     "points_per_game": to_float(entry.get("points_per_game")),
                     "goals_for_per_game": to_float(entry.get("goals_scored_per_game")),
                     "goals_against_per_game": to_float(entry.get("goals_against_per_game")),
-                    "qualification": to_str(entry.get("qualification")),
                     "tendency": to_str(entry.get("tendency")),
                 }
             )

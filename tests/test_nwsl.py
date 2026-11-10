@@ -85,6 +85,23 @@ def test_player_stats_pivot_stat_lists(recorded_upstreams) -> None:
     _batch(result, nwsl.PLAYER_STATS_SCHEMA)
 
 
+def test_player_stats_without_an_xg_model_report_null(monkeypatch: pytest.MonkeyPatch) -> None:
+    # Before 2026 the platform sends Xg = 0 for every player; that is "no model", not zero xG.
+    items = [
+        {
+            "playerId": "p1",
+            "team": {"teamId": "t1"},
+            "stats": [{"statsId": "goals", "statsValue": 15}, {"statsId": "Xg", "statsValue": 0}],
+        },
+        {"playerId": "p2", "team": {"teamId": "t1"}, "stats": [{"statsId": "Xg", "statsValue": 0}]},
+    ]
+    monkeypatch.setattr(nwsl, "resolve_season", lambda season, competition=None: (2025, "s"))
+    monkeypatch.setattr(nwsl, "_paged", lambda path, key, params: (items, None))
+    rows = nwsl.fetch_player_stats(2025).rows
+    assert [row["xg"] for row in rows] == [None, None]
+    assert rows[0]["goals"] == 15
+
+
 def test_team_stats() -> None:
     result = nwsl.fetch_team_stats(2026)
     bay = next(row for row in result.rows if row["team_abbreviation"] == "BAY")
@@ -133,6 +150,13 @@ def test_match_events() -> None:
     sub = next(row for row in result.rows if row["event_type"] == "substitution")
     assert sub["player_name"] and sub["team_abbreviation"] in {"WAS", "POR"}
     assert sub["minute"] is not None
+    # Scores are the running score, not the final score repeated on every event.
+    kickoff = next(row for row in result.rows if row["event_type"] == "first-half")
+    assert (kickoff["home_score"], kickoff["away_score"]) == (0, 0)
+    goal = next(row for row in result.rows if row["event_type"] == "goal")
+    assert (goal["home_score"], goal["away_score"], goal["team_abbreviation"]) == (0, 1, "POR")
+    scored = [row["away_score"] for row in result.rows if row["away_score"] is not None]
+    assert scored == sorted(scored)
     _batch(result, nwsl.EVENTS_SCHEMA)
 
 

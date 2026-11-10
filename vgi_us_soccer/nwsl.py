@@ -116,7 +116,7 @@ _PLAYER_STATS: tuple[tuple[str, str, pa.DataType, str], ...] = (
     ("goals", "goals", pa.int32(), "Goals scored."),
     ("assists", "assists", pa.int32(), "Assists."),
     ("goal_involvements", "goal-involvements", pa.int32(), "Goals plus assists."),
-    ("xg", "Xg", pa.float64(), "Expected goals from Opta's model."),
+    ("xg", "Xg", pa.float64(), "Opta expected goals; NULL before 2026."),
     ("shots", "total-scoring-attempts", pa.int32(), "Shots attempted."),
     ("shots_on_target", "on-target-scoring-attempts", pa.int32(), "Shots on target."),
     ("key_passes", "total-attacking-assist", pa.int32(), "Passes leading to a shot."),
@@ -235,9 +235,8 @@ EVENTS_SCHEMA = pa.schema(
         field("team_abbreviation", pa.string(), "Team acronym."),
         field("player_id", pa.string(), "Primary player identifier."),
         field("player_name", pa.string(), "Primary player name."),
-        field("home_score", pa.int32(), "Home score after the event."),
-        field("away_score", pa.int32(), "Away score after the event."),
-        field("xg", pa.float64(), "Expected-goals value for shots."),
+        field("home_score", pa.int32(), "Running home score at the time of the event."),
+        field("away_score", pa.int32(), "Running away score at the time of the event."),
         field("shot_result", pa.string(), "Shot outcome for shot events."),
     ]
 )
@@ -469,7 +468,13 @@ def fetch_player_stats(season: int | None = None, competition: str | None = None
             value = stats.get(stat_id)
             row[name] = to_float(value) if pa.types.is_floating(kind) else to_int(value)
         rows.append(row)
-    return Result([row for row in rows if row["player_id"] and row["team_id"]], max_age)
+    rows = [row for row in rows if row["player_id"] and row["team_id"]]
+    # Before 2026 the platform reports Xg as 0 for every player rather than omitting it;
+    # a season with no non-zero value has no xG model, so report NULL instead of 0.0.
+    if not any(row["xg"] for row in rows):
+        for row in rows:
+            row["xg"] = None
+    return Result(rows, max_age)
 
 
 def fetch_team_stats(season: int | None = None, competition: str | None = None) -> Result:
@@ -553,9 +558,10 @@ def fetch_match_events(match_id: str, season: int | None = None) -> Result:
                 "player_id": to_str(player.get("playerId")),
                 "player_name": join_name(player.get("mediaFirstName"), player.get("mediaLastName"))
                 or to_str(player.get("shortName")),
-                "home_score": to_int(item.get("providerHomeScore")),
-                "away_score": to_int(item.get("providerAwayScore")),
-                "xg": to_float(item.get("xg")),
+                # providerHomeScore/providerAwayScore carry the final score on every event;
+                # the *ScorePush fields carry the score as it stood when the event happened.
+                "home_score": to_int(item.get("homeScorePush")),
+                "away_score": to_int(item.get("awayScorePush")),
                 "shot_result": to_str(item.get("shotResult")),
             }
         )
