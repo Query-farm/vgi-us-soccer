@@ -1,0 +1,76 @@
+[
+ {
+  "player_id": "0Oq624oPq6",
+  "player_name": "Kalani Kossa-Rienzi",
+  "birth_date": "2002-06-27",
+  "height_ft": 5,
+  "height_in": 8,
+  "weight_lb": 150,
+  "nationality": "USA",
+  "primary_broad_position": "DF",
+  "primary_general_position": "FB",
+  "season_name": [
+   "2024",
+   "2025",
+   "2026"
+  ]
+ },
+ {
+  "player_id": "0Oq624zdq6",
+  "player_name": "Noah Streit",
+  "birth_date": "2005-10-11",
+  "height_ft": 5,
+  "height_in": 11,
+  "weight_lb": 165,
+  "nationality": "Switzerland",
+  "primary_broad_position": "FW",
+  "primary_general_position": "W",
+  "season_name": "2026"
+ },
+ {
+  "player_id": "0Oq62JVPq6",
+  "player_name": "Joyeux Masanka Bungi",
+  "birth_date": "2007-01-24",
+  "height_ft": 6,
+  "height_in": 1,
+  "weight_lb": 172,
+  "nationality": "Belgium",
+  "primary_broad_position": "DF",
+  "primary_general_position": "FB",
+  "season_name": "2026"
+ },
+ {
+  "player_id": "0Oq63P32Q6",
+  "player_name": "Nkosi Tafari",
+  "birth_date": "1997-03-23",
+  "height_ft": 6,
+  "height_in": 4,
+  "weight_lb": 185,
+  "nationality": "USA",
+  "primary_broad_position": "DF",
+  "primary_general_position": "CB",
+  "season_name": [
+   "2021",
+   "2022",
+   "2023",
+   "2024",
+   "2025",
+   "2026"
+  ]
+ },
+ {
+  "player_id": "0Oq63YndQ6",
+  "player_name": "Onni Valakari",
+  "birth_date": "1999-08-18",
+  "height_ft": 6,
+  "height_in": 2,
+  "weight_lb": 168,
+  "nationality": "Finland",
+  "primary_broad_position": "MF",
+  "primary_general_position": "CM",
+  "season_name": [
+   "2025",
+   "2026"
+  ]
+ }
+]

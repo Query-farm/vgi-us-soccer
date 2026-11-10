@@ -1,0 +1,128 @@
+# Private grading for the public vgi.agent_test_tasks prompts.
+#
+# Every source here serves live data, so tasks grade through check_sql
+# (a deterministic assertion) rather than reference_sql exact compares.
+# Historical facts are pinned to finished seasons and matches: MLS season
+# 2025 and match MLS-MAT-0009NL, NWSL 2025 and the 2026 opener, and ASA 2025.
+tasks:
+  - name: mls_table_leader
+    check_sql: >-
+      SELECT
+        (SELECT count(*) = 1 FROM us_soccer.mls.current_standings s
+           JOIN us_soccer.mls.current_club_stats c USING (club_id)
+           WHERE s.position = 1)
+        AND (SELECT max(points) FROM us_soccer.mls.current_standings)
+            = (SELECT points FROM us_soccer.mls.current_standings WHERE position = 1)
+        AND (SELECT count(*) > 0 FROM us_soccer.mls.current_player_stats p
+               JOIN us_soccer.mls.current_standings s USING (club_id) WHERE s.position = 1)
+        AND (SELECT count(*) = count(match_id) FROM us_soccer.mls.current_schedule)
+    success_criteria: >-
+      Uses current_standings and names the club in position 1 with its points.
+
+  - name: mls_2025_golden_boot
+    check_sql: >-
+      SELECT bool_or(p.player_name ILIKE '%Messi%' AND p.goals = 29 AND c.club_name = 'Inter Miami CF')
+             AND max(p.goals) = 29
+      FROM us_soccer.mls.player_stats(season := 2025) p
+      JOIN us_soccer.mls.clubs(season := 2025) c USING (club_id)
+    success_criteria: >-
+      Uses player_stats with season 2025 and reports Lionel Messi, 29 goals, Inter Miami CF.
+
+  - name: mls_match_summary
+    check_sql: >-
+      SELECT
+        (SELECT home_goals = 0 AND away_goals = 2 FROM us_soccer.mls.match('MLS-MAT-0009NL'))
+        AND (SELECT list_sort(list(player_name)) = ['Gonzalo Tapia', 'Taha Habroune']
+               FROM us_soccer.mls.match_events('MLS-MAT-0009NL') WHERE is_goal)
+        AND (SELECT sum(goals) = 2 FROM us_soccer.mls.match_player_stats('MLS-MAT-0009NL'))
+        AND (SELECT arg_max(club_abbreviation, xg) = 'CIN'
+               FROM us_soccer.mls.match_club_stats('MLS-MAT-0009NL'))
+        AND (SELECT count(*) = 1 FROM us_soccer.mls.schedule(season := 2026, competition := 'mls',
+               start_date := DATE '2026-10-18', end_date := DATE '2026-10-18')
+             WHERE match_id = 'MLS-MAT-0009NL')
+    success_criteria: >-
+      Reports Columbus Crew winning 2-0 at FC Cincinnati with goals by Gonzalo Tapia and Taha
+      Habroune, and notes Cincinnati created more xG.
+
+  - name: mls_match_lineups
+    check_sql: >-
+      SELECT
+        (SELECT count(*) = 22 FROM us_soccer.mls.match_lineups('MLS-MAT-0009NL') WHERE starter)
+        AND (SELECT count(*) > 0 FROM us_soccer.mls.match_commentary('MLS-MAT-0009NL')
+             WHERE commentary_type = 'ShotAtGoal')
+    success_criteria: >-
+      Uses match_lineups filtered to starters for Columbus Crew and match_commentary for shots.
+
+  - name: mls_messi_log
+    check_sql: >-
+      SELECT sum(goals) = 29 AND count(*) = 29
+      FROM us_soccer.mls.player_match_log('MLS-OBJ-000396', season := 2025, competition := 'mls')
+    success_criteria: >-
+      Uses player_match_log narrowed to season 2025 and the mls competition, totalling 29 goals.
+
+  - name: mls_next_pro_2025
+    check_sql: >-
+      SELECT
+        (SELECT count(*) = 1 FROM us_soccer.mls.competitions WHERE alias = 'next_pro')
+        AND (SELECT bool_or(season = 2025) FROM us_soccer.mls.seasons(competition := 'next_pro'))
+        AND (SELECT s.goals_for = c.goals
+               FROM us_soccer.mls.standings(season := 2025, competition := 'next_pro') s
+               JOIN us_soccer.mls.club_stats(season := 2025, competition := 'next_pro') c USING (club_id)
+               WHERE s.position = 1)
+    success_criteria: >-
+      Uses standings with competition next_pro and season 2025, names the club in position 1,
+      and reports its goals from club_stats or the standings goals_for column.
+
+  - name: nwsl_2025_table
+    check_sql: >-
+      SELECT
+        (SELECT team_name = 'Kansas City Current' AND points = 65
+           FROM us_soccer.nwsl.standings(season := 2025) WHERE position = 1)
+        AND (SELECT points = 65 FROM us_soccer.nwsl.team_stats(season := 2025)
+             WHERE team_name = 'Kansas City Current')
+        AND (SELECT count(*) = 14 FROM us_soccer.nwsl.teams(season := 2025))
+        AND (SELECT bool_or(season = 2025) FROM us_soccer.nwsl.seasons())
+        AND (SELECT count(*) > 0 FROM us_soccer.nwsl.competitions WHERE competition_name = 'NWSL')
+    success_criteria: >-
+      Uses nwsl.standings with season 2025 and reports Kansas City Current first with 65 points.
+
+  - name: nwsl_2026_scorer
+    check_sql: >-
+      SELECT
+        (SELECT arg_max(player_name, goals) = 'Ashley Sanchez' AND max(goals) = 20
+           FROM us_soccer.nwsl.player_stats(season := 2026))
+        AND (SELECT count(*) = 1 FROM us_soccer.nwsl.roster('NC', season := 2026)
+             WHERE player_name = 'Ashley Sanchez')
+        AND (SELECT player_name = 'Olivia Moultrie'
+             FROM us_soccer.nwsl.match_events('nwsl::Football_Match::834675f37cea4328bece6743d94c7d2d')
+             WHERE event_type = 'goal' ORDER BY event_time LIMIT 1)
+        AND (SELECT count(*) > 0 FROM us_soccer.nwsl.matches(season := 2026)
+             WHERE match_id = 'nwsl::Football_Match::834675f37cea4328bece6743d94c7d2d')
+        AND (SELECT count(*) = count(s.team_id) FROM us_soccer.nwsl.current_player_stats p
+             LEFT JOIN us_soccer.nwsl.current_standings s USING (team_id))
+        AND (SELECT count(*) > 0 FROM us_soccer.nwsl.current_matches)
+    success_criteria: >-
+      Reports Ashley Sanchez (North Carolina Courage, 20 goals), confirms her on the NC roster,
+      and names Olivia Moultrie as the opening-match scorer.
+
+  - name: asa_xg_overperformer
+    check_sql: >-
+      SELECT
+        (SELECT arg_max(player_name, goals_minus_xgoals) = 'Evander'
+           FROM us_soccer.asa.xg_players(season := 2025, minimum_minutes := 1500))
+        AND (SELECT count(*) = 1 FROM us_soccer.asa.teams() WHERE team_abbreviation = 'CIN')
+        AND (SELECT sum(goals_for) FROM us_soccer.asa.xg_teams(season := 2025))
+            = (SELECT sum(home_goals + away_goals) FROM us_soccer.asa.xg_games(season := 2025))
+    success_criteria: >-
+      Uses asa.xg_players for 2025 with minimum_minutes 1500 and names Evander (FC Cincinnati).
+
+  - name: asa_top_salary
+    check_sql: >-
+      SELECT
+        (SELECT arg_max(player_name, guaranteed_compensation) = 'Lionel Messi'
+           FROM us_soccer.asa.salaries(season := 2025))
+        AND (SELECT count(*) > 0 FROM us_soccer.asa.goals_added_players(season := 2025)
+             WHERE player_name = 'Lionel Messi')
+    success_criteria: >-
+      Uses asa.salaries for 2025, names Lionel Messi, and reports his goals added from
+      goals_added_players.

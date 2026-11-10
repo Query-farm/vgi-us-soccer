@@ -1,0 +1,141 @@
+{
+ "competitions": [
+  {
+   "competition_id": "MLS-COM-000001",
+   "competition_name": "Major League Soccer - Regular Season",
+   "competition_name_french": "MLS - Saison régulière",
+   "country": "USA",
+   "competition_type": "League"
+  },
+  {
+   "competition_id": "MLS-COM-000002",
+   "competition_name": "Major League Soccer - Cup Playoffs",
+   "competition_name_french": "MLS - Séries éliminatoires",
+   "country": "USA",
+   "competition_type": "Tournament"
+  },
+  {
+   "competition_id": "MLS-COM-000003",
+   "competition_name": "MLS NEXT Pro - Regular Season",
+   "competition_name_french": "MLS NEXT Pro – Saison régulière",
+   "country": "USA",
+   "competition_type": "League"
+  },
+  {
+   "competition_id": "MLS-COM-000004",
+   "competition_name": "MLS NEXT Pro - Playoffs",
+   "competition_name_french": "MLS NEXT Pro - Séries éliminatoires",
+   "country": "USA",
+   "competition_type": "Tournament"
+  },
+  {
+   "competition_id": "MLS-COM-000005",
+   "competition_name": "MLS All-Star Game",
+   "competition_name_french": "Match des étoiles de la MLS",
+   "country": "USA",
+   "competition_type": "Tournament"
+  },
+  {
+   "competition_id": "MLS-COM-000006",
+   "competition_name": "Leagues Cup",
+   "competition_name_french": "Leagues Cup",
+   "country": "USA",
+   "competition_type": "Tournament"
+  },
+  {
+   "competition_id": "MLS-COM-000007",
+   "competition_name": "Campeones Cup",
+   "competition_name_french": "Campeones Cup",
+   "country": "USA",
+   "competition_type": "Tournament"
+  },
+  {
+   "competition_id": "MLS-COM-00000K",
+   "competition_name": "CONCACAF Champions Cup",
+   "competition_name_french": "Coupe des champions de la CONCACAF",
+   "country": "USA",
+   "competition_type": "Tournament"
+  },
+  {
+   "competition_id": "MLS-COM-00002R",
+   "competition_name": "MLS Test",
+   "country": "USA",
+   "competition_type": "Tournament"
+  },
+  {
+   "competition_id": "MLS-COM-00002S",
+   "competition_name": "Club Friendly Matches",
+   "competition_name_french": "Matchs amicaux",
+   "country": "USA",
+   "competition_type": "League"
+  },
+  {
+   "competition_id": "MLS-COM-00002U",
+   "competition_name": "U.S. Open Cup",
+   "competition_name_french": "U.S. Open Cup",
+   "country": "USA",
+   "competition_type": "Tournament"
+  },
+  {
+   "competition_id": "MLS-COM-00002V",
+   "competition_name": "TELUS Canadian Championship",
+   "competition_name_french": "Championnat canadien TELUS",
+   "country": "Canada",
+   "competition_type": "Tournament"
+  },
+  {
+   "competition_id": "MLS-COM-00002W",
+   "competition_name": "Copa America",
+   "competition_name_french": "Copa America",
+   "country": "USA",
+   "competition_type": "Tournament"
+  },
+  {
+   "competition_id": "MLS-COM-00002X",
+   "competition_name": "MLS NEXT Pro Invitational",
+   "country": "USA",
+   "competition_type": "Tournament"
+  },
+  {
+   "competition_id": "MLS-COM-00002Y",
+   "competition_name": "FIFA Club World Cup",
+   "competition_name_french": "Coupe du monde des clubs de la FIFA",
+   "country": "USA",
+   "competition_type": "Tournament"
+  },
+  {
+   "competition_id": "MLS-COM-00002Z",
+   "competition_name": "CONCACAF Nations League",
+   "competition_name_french": "Ligue des nations de la CONCACAF",
+   "country": "USA",
+   "competition_type": "Tournament"
+  },
+  {
+   "competition_id": "MLS-COM-000030",
+   "competition_name": "CONCACAF Gold Cup",
+   "country": "USA",
+   "competition_type": "Tournament"
+  },
+  {
+   "competition_id": "MLS-COM-000032",
+   "competition_name": "International Friendlies",
+   "country": "Switzerland",
+   "competition_type": "League"
+  },
+  {
+   "competition_id": "MLS-COM-000034",
+   "competition_name": "MLS Preseason Friendlies",
+   "competition_name_french": "Pré-saison MLS",
+   "country": "USA",
+   "competition_type": "League"
+  },
+  {
+   "competition_id": "MLS-COM-000035",
+   "competition_name": "FIFA World Cup",
+   "competition_name_french": "Coupe du Monde de la FIFA",
+   "country": "Switzerland",
+   "competition_type": "Tournament"
+  }
+ ],
+ "next_page_token": "eyJQayI6ImNvbXBldGl0aW9uSW5mbyIsIlNrIjoiY29tcGV0aXRpb24jTUxTLUNPTS0wMDAwMzUifQ=="
+}

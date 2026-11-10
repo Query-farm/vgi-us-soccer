@@ -1,0 +1,333 @@
+{
+ "match_information": {
+  "competition_id": "MLS-COM-000001",
+  "competition_name": "Major League Soccer - Regular Season",
+  "away_team_goals": 2,
+  "home_team_goals": 0,
+  "kickoff_time": "2026-10-18T21:12:14.829Z",
+  "match_day": 31,
+  "match_id": "MLS-MAT-0009NL",
+  "match_title": "FC Cincinnati:Columbus Crew",
+  "planned_kickoff_time": "2026-10-18T21:00:00Z",
+  "result": "0:2",
+  "season": 2026,
+  "season_id": "MLS-SEA-0001KA",
+  "competition_type": "League",
+  "section_name": "TOTAL",
+  "competition_label": "MLS Regular Season 2026",
+  "series_type": "",
+  "total_time_first_half": 3243240,
+  "total_time_second_half": 3006640,
+  "playing_time_first_half": 1728520,
+  "playing_time_second_half": 1914600,
+  "total_time_first_half_extra": 0,
+  "total_time_second_half_extra": 0,
+  "total_time_penalty": 0,
+  "playing_time_penalty": 0,
+  "other_information": "",
+  "match_type": "MATCHWEEK 31",
+  "match_scheduled": true,
+  "date_quality": "",
+  "end_date": "2026-10-19T00:00:00Z",
+  "sub_league": "EASTERN CONFERENCE",
+  "group": "",
+  "competition_name_french": "MLS - Saison régulière",
+  "match_status": "finalWhistle",
+  "minute_of_play": "90+6"
+ },
+ "environment": {
+  "air_humidity": 31,
+  "air_pressure": 1030,
+  "country": "USA",
+  "floodlight": "off",
+  "pitch_erosion": "none",
+  "pitch_x": 105,
+  "pitch_y": 68,
+  "precipitation": "none",
+  "roof": "open",
+  "sold_out": true,
+  "stadium_address": "Central Parkway 1501, 45214 Cincinnati, OH",
+  "stadium_capacity": 26000,
+  "stadium_id": "MLS-STA-000007",
+  "stadium_name": "TQL Stadium",
+  "temperature": 18,
+  "number_of_spectators": 25513,
+  "house_number": "1501",
+  "street": "Central Parkway",
+  "city": "Cincinnati, OH",
+  "postal_code": "45214"
+ },
+ "home": {
+  "initial_line_up": "3-5-2",
+  "latest_line_up": "3-5-2",
+  "player_shirt_main_color": "#003087",
+  "player_shirt_number_color": "#FFFFFF",
+  "player_shirt_secondary_color": "#FE5000",
+  "player_shirt_type": "Home jersey",
+  "players": [
+   {
+    "first_name": "Roman",
+    "last_name": "Celentano",
+    "person_id": "MLS-OBJ-00007M",
+    "playing_position": "GK",
+    "shirt_number": 18,
+    "short_name": "R. Celentano",
+    "starting": "true",
+    "team_leader": false,
+    "is_on_field": "true"
+   },
+   {
+    "first_name": "Evan",
+    "last_name": "Louro",
+    "person_id": "MLS-OBJ-00007P",
+    "playing_position": "",
+    "shirt_number": 13,
+    "short_name": "E. Louro",
+    "starting": "false",
+    "team_leader": false,
+    "is_on_field": "false"
+   },
+   {
+    "first_name": "Nick",
+    "last_name": "Hagglund",
+    "person_id": "MLS-OBJ-00007T",
+    "playing_position": "CB",
+    "shirt_number": 4,
+    "short_name": "N. Hagglund",
+    "starting": "false",
+    "team_leader": false,
+    "is_on_field": "false"
+   },
+   {
+    "first_name": "Obinna",
+    "last_name": "Nwobodo",
+    "person_id": "MLS-OBJ-000081",
+    "playing_position": "LDM",
+    "shirt_number": 5,
+    "short_name": "O. Nwobodo",
+    "starting": "true",
+    "team_leader": false,
+    "is_on_field": "true"
+   },
+   {
+    "first_name": "Teenage",
+    "last_name": "Hadebe",
+    "person_id": "MLS-OBJ-00009J",
+    "playing_position": "LCB",
+    "shirt_number": 15,
+    "short_name": "T. Hadebe",
+    "starting": "true",
+    "team_leader": false,
+    "is_on_field": "true"
+   }
+  ],
+  "role": "home",
+  "team_id": "MLS-CLU-000007",
+  "team_name": "FC Cincinnati",
+  "team_short_name": "Cincinnati",
+  "team_three_letter_code": "CIN",
+  "trainer_staff": [
+   {
+    "first_name": "Pat",
+    "last_name": "Noonan",
+    "person_id": "MLS-OBJ-00008F",
+    "role": "headcoach",
+    "short_name": "P. Noonan"
+   },
+   {
+    "first_name": "Ricardo",
+    "last_name": "Paez",
+    "person_id": "MLS-OBJ-0001N2",
+    "role": "assistantHeadcoach",
+    "short_name": "R. Paez"
+   },
+   {
+    "first_name": "Kenny",
+    "last_name": "Arena",
+    "person_id": "MLS-OBJ-0001N5",
+    "role": "assistantHeadcoach",
+    "short_name": "K. Arena"
+   }
+  ],
+  "official_staff": [
+   {
+    "first_name": "Paul",
+    "last_name": "Rogers",
+    "person_id": "MLS-OBJ-0001N8",
+    "role": "otherOfficial",
+    "short_name": "P. Rogers"
+   }
+  ]
+ },
+ "away": {
+  "initial_line_up": "4-4-2 Double-6",
+  "latest_line_up": "4-4-2 Double-6",
+  "player_shirt_main_color": "#E7CF00",
+  "player_shirt_number_color": "#0d0c0a",
+  "player_shirt_secondary_color": "#0d0c0a",
+  "player_shirt_type": "Home jersey",
+  "players": [
+   {
+    "first_name": "Brooks",
+    "last_name": "Lennon",
+    "person_id": "MLS-OBJ-00000A",
+    "playing_position": "RM",
+    "shirt_number": 11,
+    "short_name": "B. Lennon",
+    "starting": "true",
+    "team_leader": false,
+    "is_on_field": "true"
+   },
+   {
+    "first_name": "Amar",
+    "last_name": "Sejdić",
+    "person_id": "MLS-OBJ-00000R",
+    "playing_position": "",
+    "shirt_number": 14,
+    "short_name": "A. Sejdić",
+    "starting": "false",
+    "team_leader": false,
+    "is_on_field": "false"
+   },
+   {
+    "first_name": "Josef",
+    "last_name": "Martínez",
+    "person_id": "MLS-OBJ-00000X",
+    "playing_position": "",
+    "shirt_number": 77,
+    "short_name": "J. Martínez",
+    "starting": "false",
+    "team_leader": false,
+    "is_on_field": "false"
+   },
+   {
+    "first_name": "Patrick",
+    "last_name": "Schulte",
+    "person_id": "MLS-OBJ-00005N",
+    "playing_position": "GK",
+    "shirt_number": 28,
+    "short_name": "P. Schulte",
+    "starting": "true",
+    "team_leader": false,
+    "is_on_field": "true"
+   },
+   {
+    "first_name": "Steven",
+    "last_name": "Moreira",
+    "person_id": "MLS-OBJ-00005U",
+    "playing_position": "RCB",
+    "shirt_number": 31,
+    "short_name": "S. Moreira",
+    "starting": "true",
+    "team_leader": false,
+    "is_on_field": "true"
+   }
+  ],
+  "role": "away",
+  "team_id": "MLS-CLU-00000E",
+  "team_name": "Columbus Crew",
+  "team_short_name": "Columbus",
+  "team_three_letter_code": "CLB",
+  "trainer_staff": [
+   {
+    "first_name": "Josh",
+    "last_name": "Williams",
+    "person_id": "MLS-OBJ-00005P",
+    "role": "assistantHeadcoach",
+    "short_name": "J. Williams"
+   },
+   {
+    "first_name": "Laurent",
+    "last_name": "Courtois",
+    "person_id": "MLS-OBJ-00029C",
+    "role": "headcoach",
+    "short_name": "L. Courtois"
+   }
+  ],
+  "official_staff": [
+   {
+    "first_name": "Daniel",
+    "last_name": "Givens",
+    "person_id": "MLS-OBJ-0001O1",
+    "role": "Athletic Trainer",
+    "short_name": "D. Givens"
+   },
+   {
+    "first_name": "Phil",
+    "last_name": "Boerger",
+    "person_id": "MLS-OBJ-0001OD",
+    "role": "otherOfficial",
+    "short_name": "P. Boerger"
+   },
+   {
+    "first_name": "Callum",
+    "last_name": "Mccaskie",
+    "person_id": "MLS-OBJ-000C1B",
+    "role": "Sports Scientist",
+    "short_name": "C. Mccaskie"
+   }
+  ]
+ },
+ "referees": [
+  {
+   "first_name": "Filip",
+   "last_name": "Dujic",
+   "person_id": "MLS-OBJ-0001F2",
+   "role": "fourthOfficial",
+   "short_name": "F. Dujic"
+  },
+  {
+   "first_name": "Brian",
+   "last_name": "Dunn",
+   "person_id": "MLS-OBJ-0001H9",
+   "role": "secondAssistant",
+   "short_name": "B. Dunn"
+  },
+  {
+   "first_name": "Younes",
+   "last_name": "Marrakchi",
+   "person_id": "MLS-OBJ-0001HE",
+   "role": "videoReferee",
+   "short_name": "Y. Marrakchi"
+  },
+  {
+   "first_name": "Jonathan",
+   "last_name": "Johnson",
+   "person_id": "MLS-OBJ-0001HJ",
+   "role": "videoRefereeAssistant",
+   "short_name": "J. Johnson"
+  },
+  {
+   "first_name": "Cameron",
+   "last_name": "Blanchard",
+   "person_id": "MLS-OBJ-0001ZR",
+   "role": "firstAssistant",
+   "short_name": "C. Blanchard"
+  },
+  {
+   "first_name": "Drew",
+   "last_name": "Fischer",
+   "person_id": "MLS-OBJ-00020B",
+   "role": "referee",
+   "short_name": "D. Fischer"
+  }
+ ],
+ "last_matches": [
+  {
+   "match_date": "2026-07-25",
+   "home_team_id": "MLS-CLU-00000E",
+   "home_team_name": "Columbus Crew",
+   "home_team_short_name": "Columbus",
+   "home_team_three_letter_code": "CLB",
+   "away_team_id": "MLS-CLU-000007",
+   "away_team_name": "FC Cincinnati",
+   "away_team_short_name": "Cincinnati",
+   "away_team_three_letter_code": "CIN",
+   "home_team_goals": 2,
+   "away_team_goals": 1,
+   "match_id": "MLS-MAT-0009HS",
+   "season_id": "MLS-SEA-0001KA",
+   "competition_id": "MLS-COM-000001"
+  }
+ ]
+}

@@ -1,0 +1,37 @@
+{
+ "competitions": [
+  {
+   "competitionId": "nwsl::Football_Competition::59c189a9a911446fa92b566f7989d9dc",
+   "providerId": "opta:Competition:1wdo4oew5cbtr9q26h44gndw4",
+   "name": "NWSL Fall Series",
+   "officialName": "NWSL Fall Series",
+   "shortName": "NWSL Fall Series",
+   "acronymName": "NWSL Fall Series"
+  },
+  {
+   "competitionId": "nwsl::Football_Competition::3293333447504e83986ec13e794b68ea",
+   "providerId": "opta:Competition:djkvh1luqdkdixpoe653lzixg",
+   "name": "NWSL",
+   "officialName": "NWSL",
+   "shortName": "NWSL",
+   "acronymName": "NWSL"
+  },
+  {
+   "competitionId": "nwsl::Football_Competition::de3bf05b5d2141df980b54447443bd85",
+   "providerId": "opta:Competition:85qdzpr6i56z8tjex9d5mu5pm",
+   "name": "NWSL Challenge Cup",
+   "officialName": "NWSL Challenge Cup",
+   "shortName": "NWSL Challenge Cup",
+   "acronymName": "NWSL Challenge Cup"
+  },
+  {
+   "competitionId": "nwsl::Football_Competition::e0d431397c1d4b55aaac36edfb0756b9",
+   "providerId": "opta:Competition:135j6qi3ap8i3vc9hwdo4fjtg",
+   "name": "NWSL x Liga MXF Summer Cup",
+   "officialName": "NWSL x Liga MXF Summer Cup",
+   "shortName": "NWSL x Liga MXF Summer Cup",
+   "acronymName": "NWSL x Liga MXF Summer Cup"
+  }
+ ],
+ "apiCallRequestTime": "2026-11-10T17:09:06.5851403+00:00"
+}

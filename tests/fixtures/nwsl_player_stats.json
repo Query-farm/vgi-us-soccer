@@ -1,0 +1,419 @@
+{
+ "competition": {
+  "seasonId": "nwsl::Football_Season::0b6761e4701749f593690c0f338da74c",
+  "tournamentName": null,
+  "competitionId": "nwsl::Football_Competition::3293333447504e83986ec13e794b68ea",
+  "providerId": "opta:Competition:djkvh1luqdkdixpoe653lzixg",
+  "name": "NWSL",
+  "officialName": "NWSL",
+  "shortName": null,
+  "acronymName": null
+ },
+ "players": [
+  {
+   "stats": [
+    {
+     "statsId": "games-played",
+     "statsValue": 30
+    },
+    {
+     "statsId": "minutes-played",
+     "statsValue": 2593
+    },
+    {
+     "statsId": "goals",
+     "statsValue": 20
+    },
+    {
+     "statsId": "assists",
+     "statsValue": 5
+    },
+    {
+     "statsId": "total-scoring-attempts",
+     "statsValue": 86
+    },
+    {
+     "statsId": "goal-involvements",
+     "statsValue": 25
+    },
+    {
+     "statsId": "on-target-scoring-attempts",
+     "statsValue": 52
+    },
+    {
+     "statsId": "total-attacking-assist",
+     "statsValue": 5
+    },
+    {
+     "statsId": "fouls-committed",
+     "statsValue": 11
+    },
+    {
+     "statsId": "fouls-suffered",
+     "statsValue": 25
+    },
+    {
+     "statsId": "total-offside",
+     "statsValue": 20
+    },
+    {
+     "statsId": "yellow-cards",
+     "statsValue": 0
+    },
+    {
+     "statsId": "red-cards",
+     "statsValue": 0
+    },
+    {
+     "statsId": "accurate-pass-percentage",
+     "statsValue": 71
+    },
+    {
+     "statsId": "goals-conceded",
+     "statsValue": 37
+    },
+    {
+     "statsId": "penalty-attempts",
+     "statsValue": 3
+    },
+    {
+     "statsId": "penalties-successful",
+     "statsValue": 3
+    },
+    {
+     "statsId": "Xg",
+     "statsValue": 16.0021
+    },
+    {
+     "statsId": "Clean Sheets",
+     "statsValue": 5
+    },
+    {
+     "statsId": "Interceptions",
+     "statsValue": 14
+    },
+    {
+     "statsId": "Recoveries",
+     "statsValue": 113
+    },
+    {
+     "statsId": "Starts",
+     "statsValue": 30
+    },
+    {
+     "statsId": "Tackles Won",
+     "statsValue": 26
+    },
+    {
+     "statsId": "Total Big Chances Created",
+     "statsValue": 3
+    },
+    {
+     "statsId": "Total Passes",
+     "statsValue": 648
+    }
+   ],
+   "rankLabel": "1",
+   "team": {
+    "teamId": "nwsl::Football_Team::fb41ef4439dd495098cb6d40415767cc",
+    "providerId": "opta:Team:b4fbmos00gxtk8qnaqsm392p5",
+    "shortName": "Courage",
+    "officialName": "North Carolina Courage",
+    "acronymName": "NC",
+    "acronymNameLocalized": "NC",
+    "isTeamFake": false,
+    "mediaName": "North Carolina Courage",
+    "mediaShortName": "Courage",
+    "countryCode": "US",
+    "teamType": "club",
+    "overallSummary": null,
+    "stadium": null
+   },
+   "playerId": "nwsl::Football_Player::ed7ee4eca97044dd97750b29c3850769",
+   "providerId": "opta:Player:cwerr3zz6pqzzzqso9dx69fjd",
+   "bibNumber": "2",
+   "roleLabel": "Midfielder",
+   "role": 3,
+   "mediaFirstName": "Ashley",
+   "mediaLastName": "Sanchez",
+   "shirtName": "",
+   "shortName": "A. Sanchez",
+   "displayName": "",
+   "nationality": "USA",
+   "nationalityIsoCode": "USA",
+   "apiCallRequestTime": "0001-01-01T00:00:00"
+  },
+  {
+   "stats": [
+    {
+     "statsId": "games-played",
+     "statsValue": 23
+    },
+    {
+     "statsId": "minutes-played",
+     "statsValue": 1796
+    },
+    {
+     "statsId": "goals",
+     "statsValue": 17
+    },
+    {
+     "statsId": "assists",
+     "statsValue": 4
+    },
+    {
+     "statsId": "total-scoring-attempts",
+     "statsValue": 69
+    },
+    {
+     "statsId": "goal-involvements",
+     "statsValue": 21
+    },
+    {
+     "statsId": "on-target-scoring-attempts",
+     "statsValue": 39
+    },
+    {
+     "statsId": "total-attacking-assist",
+     "statsValue": 4
+    },
+    {
+     "statsId": "fouls-committed",
+     "statsValue": 42
+    },
+    {
+     "statsId": "fouls-suffered",
+     "statsValue": 48
+    },
+    {
+     "statsId": "total-offside",
+     "statsValue": 18
+    },
+    {
+     "statsId": "yellow-cards",
+     "statsValue": 4
+    },
+    {
+     "statsId": "red-cards",
+     "statsValue": 0
+    },
+    {
+     "statsId": "accurate-pass-percentage",
+     "statsValue": 66
+    },
+    {
+     "statsId": "goals-conceded",
+     "statsValue": 30
+    },
+    {
+     "statsId": "penalty-attempts",
+     "statsValue": 2
+    },
+    {
+     "statsId": "penalties-successful",
+     "statsValue": 2
+    },
+    {
+     "statsId": "Xg",
+     "statsValue": 11.6551
+    },
+    {
+     "statsId": "Clean Sheets",
+     "statsValue": 3
+    },
+    {
+     "statsId": "Interceptions",
+     "statsValue": 5
+    },
+    {
+     "statsId": "Recoveries",
+     "statsValue": 41
+    },
+    {
+     "statsId": "Starts",
+     "statsValue": 20
+    },
+    {
+     "statsId": "Tackles Won",
+     "statsValue": 9
+    },
+    {
+     "statsId": "Total Big Chances Created",
+     "statsValue": 5
+    },
+    {
+     "statsId": "Total Passes",
+     "statsValue": 222
+    }
+   ],
+   "rankLabel": "2",
+   "team": {
+    "teamId": "nwsl::Football_Team::c3e9513e280b41e5bfbb8230076e8c43",
+    "providerId": "opta:Team:966pdxhsoxaib9qt5083h8uus",
+    "shortName": "Pride",
+    "officialName": "Orlando Pride",
+    "acronymName": "ORL",
+    "acronymNameLocalized": "ORL",
+    "isTeamFake": false,
+    "mediaName": "Orlando Pride",
+    "mediaShortName": "Pride",
+    "countryCode": "US",
+    "teamType": "club",
+    "overallSummary": null,
+    "stadium": null
+   },
+   "playerId": "nwsl::Football_Player::0021a2896ee54ef191fb324dec97dd78",
+   "providerId": "opta:Player:e2obgph6szyo04em3qr94g1qt",
+   "bibNumber": "11",
+   "roleLabel": "Forward",
+   "role": 4,
+   "mediaFirstName": "Barbra",
+   "mediaLastName": "Banda",
+   "shirtName": "Barbra Banda",
+   "shortName": "B. Banda",
+   "displayName": "",
+   "nationality": "Zambia",
+   "nationalityIsoCode": "ZAM",
+   "apiCallRequestTime": "0001-01-01T00:00:00"
+  },
+  {
+   "stats": [
+    {
+     "statsId": "games-played",
+     "statsValue": 29
+    },
+    {
+     "statsId": "minutes-played",
+     "statsValue": 2294
+    },
+    {
+     "statsId": "goals",
+     "statsValue": 15
+    },
+    {
+     "statsId": "assists",
+     "statsValue": 5
+    },
+    {
+     "statsId": "total-scoring-attempts",
+     "statsValue": 96
+    },
+    {
+     "statsId": "goal-involvements",
+     "statsValue": 20
+    },
+    {
+     "statsId": "on-target-scoring-attempts",
+     "statsValue": 57
+    },
+    {
+     "statsId": "total-attacking-assist",
+     "statsValue": 5
+    },
+    {
+     "statsId": "fouls-committed",
+     "statsValue": 30
+    },
+    {
+     "statsId": "fouls-suffered",
+     "statsValue": 36
+    },
+    {
+     "statsId": "total-offside",
+     "statsValue": 13
+    },
+    {
+     "statsId": "yellow-cards",
+     "statsValue": 1
+    },
+    {
+     "statsId": "red-cards",
+     "statsValue": 1
+    },
+    {
+     "statsId": "accurate-pass-percentage",
+     "statsValue": 68
+    },
+    {
+     "statsId": "goals-conceded",
+     "statsValue": 37
+    },
+    {
+     "statsId": "penalty-attempts",
+     "statsValue": 6
+    },
+    {
+     "statsId": "penalties-successful",
+     "statsValue": 6
+    },
+    {
+     "statsId": "Xg",
+     "statsValue": 17.4829
+    },
+    {
+     "statsId": "Clean Sheets",
+     "statsValue": 6
+    },
+    {
+     "statsId": "Interceptions",
+     "statsValue": 7
+    },
+    {
+     "statsId": "Recoveries",
+     "statsValue": 105
+    },
+    {
+     "statsId": "Starts",
+     "statsValue": 26
+    },
+    {
+     "statsId": "Tackles Won",
+     "statsValue": 20
+    },
+    {
+     "statsId": "Total Big Chances Created",
+     "statsValue": 14
+    },
+    {
+     "statsId": "Total Passes",
+     "statsValue": 446
+    }
+   ],
+   "rankLabel": "3",
+   "team": {
+    "teamId": "nwsl::Football_Team::96ba7b37bd8544a1a7329183459150ff",
+    "providerId": "opta:Team:446mp88j1vpk9iwui9fiifrp8",
+    "shortName": "Thorns",
+    "officialName": "Portland Thorns FC",
+    "acronymName": "POR",
+    "acronymNameLocalized": "POR",
+    "isTeamFake": false,
+    "mediaName": "Portland Thorns FC",
+    "mediaShortName": "Thorns",
+    "countryCode": "US",
+    "teamType": "club",
+    "overallSummary": null,
+    "stadium": null
+   },
+   "playerId": "nwsl::Football_Player::40a07c6e4fd74acd864ee7f812351843",
+   "providerId": "opta:Player:f05vaz2h7sxozmvi641cf7qi1",
+   "bibNumber": "9",
+   "roleLabel": "Forward",
+   "role": 4,
+   "mediaFirstName": "Sophia",
+   "mediaLastName": "Wilson",
+   "shirtName": "",
+   "shortName": "S. Wilson",
+   "displayName": "",
+   "nationality": "USA",
+   "nationalityIsoCode": "USA",
+   "apiCallRequestTime": "0001-01-01T00:00:00"
+  }
+ ],
+ "pagination": {
+  "totalPages": 1,
+  "currentPage": 1,
+  "isLastPage": true
+ },
+ "apiCallRequestTime": "2026-11-10T17:33:18.8603327+00:00"
+}

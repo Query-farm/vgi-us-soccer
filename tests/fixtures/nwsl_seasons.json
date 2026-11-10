@@ -1,0 +1,41 @@
+{
+ "seasons": [
+  {
+   "seasonId": "nwsl::Football_Season::0b6761e4701749f593690c0f338da74c",
+   "startDateUtc": "2026-03-14T00:00:00Z",
+   "endDateUtc": "2026-11-21T00:00:00Z",
+   "seasonName": "2026",
+   "competitionId": "nwsl::Football_Competition::3293333447504e83986ec13e794b68ea",
+   "providerId": "opta:Season:4mrfrvsjf1xhltsvqyb6lx250",
+   "name": "NWSL",
+   "officialName": "NWSL",
+   "shortName": "NWSL",
+   "acronymName": "NWSL"
+  },
+  {
+   "seasonId": "nwsl::Football_Season::fad050beee834db88fa9f2eb28ce5a5c",
+   "startDateUtc": "2025-03-15T00:00:00Z",
+   "endDateUtc": "2025-11-23T00:00:00Z",
+   "seasonName": "2025",
+   "competitionId": "nwsl::Football_Competition::3293333447504e83986ec13e794b68ea",
+   "providerId": "opta:Season:3ducfa94ga849pfvx8bjjgt1w",
+   "name": "NWSL",
+   "officialName": "NWSL",
+   "shortName": "NWSL",
+   "acronymName": "NWSL"
+  },
+  {
+   "seasonId": "nwsl::Football_Season::fe17bea0b7234cf7957c7249cb828270",
+   "startDateUtc": "2024-03-16T00:00:00Z",
+   "endDateUtc": "2024-11-24T00:00:00Z",
+   "seasonName": "2024",
+   "competitionId": "nwsl::Football_Competition::3293333447504e83986ec13e794b68ea",
+   "providerId": "opta:Season:1y6f8h7azok4tqvz2qno41btg",
+   "name": "NWSL",
+   "officialName": "NWSL",
+   "shortName": "NWSL",
+   "acronymName": "NWSL"
+  }
+ ],
+ "apiCallRequestTime": "2026-11-10T17:33:16.6712082+00:00"
+}

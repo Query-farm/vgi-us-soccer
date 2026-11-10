@@ -1,0 +1,752 @@
+{
+ "standings": [
+  {
+   "competition": {
+    "seasonId": "nwsl::Football_Season::0b6761e4701749f593690c0f338da74c",
+    "startDateUtc": "2026-03-14T00:00:00Z",
+    "endDateUtc": "2026-11-21T00:00:00Z",
+    "seasonName": "2026",
+    "competitionId": "nwsl::Football_Competition::3293333447504e83986ec13e794b68ea",
+    "providerId": "opta:Competition:djkvh1luqdkdixpoe653lzixg",
+    "name": "NWSL",
+    "officialName": "NWSL",
+    "shortName": "NWSL",
+    "acronymName": "NWSL"
+   },
+   "type": "table",
+   "teams": [
+    {
+     "stats": [
+      {
+       "statsId": "rank",
+       "statsValue": 1
+      },
+      {
+       "statsId": "team",
+       "statsValue": null
+      },
+      {
+       "statsId": "points",
+       "statsValue": 61
+      },
+      {
+       "statsId": "matches-played",
+       "statsValue": 30
+      },
+      {
+       "statsId": "win",
+       "statsValue": 18
+      },
+      {
+       "statsId": "draw",
+       "statsValue": 7
+      },
+      {
+       "statsId": "lose",
+       "statsValue": 5
+      },
+      {
+       "statsId": "goals-for",
+       "statsValue": 39
+      },
+      {
+       "statsId": "goals-against",
+       "statsValue": 23
+      },
+      {
+       "statsId": "goal-difference",
+       "statsValue": 16
+      },
+      {
+       "statsId": "movement",
+       "statsValue": "stable"
+      },
+      {
+       "statsId": "form",
+       "statsValue": [
+        {
+         "formLabel": "Win",
+         "formLabelAbbreviation": "W",
+         "formType": "W"
+        },
+        {
+         "formLabel": "Win",
+         "formLabelAbbreviation": "W",
+         "formType": "W"
+        },
+        {
+         "formLabel": "Lose",
+         "formLabelAbbreviation": "L",
+         "formType": "L"
+        },
+        {
+         "formLabel": "Draw",
+         "formLabelAbbreviation": "D",
+         "formType": "D"
+        },
+        {
+         "formLabel": "Win",
+         "formLabelAbbreviation": "W",
+         "formType": "W"
+        },
+        {
+         "formLabel": "Win",
+         "formLabelAbbreviation": "W",
+         "formType": "W"
+        }
+       ]
+      }
+     ],
+     "qualification": {
+      "qualificationId": 0,
+      "qualificationLabel": "Final Series"
+     },
+     "achievementStatuses": [],
+     "note": null,
+     "teamId": "nwsl::Football_Team::c83f2ca05aa84c738b5373f0d2a31b39",
+     "providerId": "opta:Team:bgkfdckqfqnfbmecbtz03n76d",
+     "shortName": "Gotham FC",
+     "officialName": "Gotham FC",
+     "acronymName": "GFC",
+     "acronymNameLocalized": "GFC",
+     "isTeamFake": false,
+     "mediaName": "Gotham FC",
+     "mediaShortName": "Gotham FC",
+     "countryCode": null,
+     "teamType": null,
+     "overallSummary": null,
+     "stadium": null
+    },
+    {
+     "stats": [
+      {
+       "statsId": "rank",
+       "statsValue": 2
+      },
+      {
+       "statsId": "team",
+       "statsValue": null
+      },
+      {
+       "statsId": "points",
+       "statsValue": 58
+      },
+      {
+       "statsId": "matches-played",
+       "statsValue": 30
+      },
+      {
+       "statsId": "win",
+       "statsValue": 18
+      },
+      {
+       "statsId": "draw",
+       "statsValue": 4
+      },
+      {
+       "statsId": "lose",
+       "statsValue": 8
+      },
+      {
+       "statsId": "goals-for",
+       "statsValue": 45
+      },
+      {
+       "statsId": "goals-against",
+       "statsValue": 31
+      },
+      {
+       "statsId": "goal-difference",
+       "statsValue": 14
+      },
+      {
+       "statsId": "movement",
+       "statsValue": "stable"
+      },
+      {
+       "statsId": "form",
+       "statsValue": [
+        {
+         "formLabel": "Win",
+         "formLabelAbbreviation": "W",
+         "formType": "W"
+        },
+        {
+         "formLabel": "Draw",
+         "formLabelAbbreviation": "D",
+         "formType": "D"
+        },
+        {
+         "formLabel": "Win",
+         "formLabelAbbreviation": "W",
+         "formType": "W"
+        },
+        {
+         "formLabel": "Win",
+         "formLabelAbbreviation": "W",
+         "formType": "W"
+        },
+        {
+         "formLabel": "Win",
+         "formLabelAbbreviation": "W",
+         "formType": "W"
+        },
+        {
+         "formLabel": "Win",
+         "formLabelAbbreviation": "W",
+         "formType": "W"
+        }
+       ]
+      }
+     ],
+     "qualification": {
+      "qualificationId": 0,
+      "qualificationLabel": "Final Series"
+     },
+     "achievementStatuses": [],
+     "note": null,
+     "teamId": "nwsl::Football_Team::ca719042b34443c4bcfe380ca4850eaf",
+     "providerId": "opta:Team:esvbnzqbyvxp2k570ez7h1a1g",
+     "shortName": "San Diego Wave",
+     "officialName": "San Diego Wave FC",
+     "acronymName": "SD",
+     "acronymNameLocalized": "SD",
+     "isTeamFake": false,
+     "mediaName": "San Diego Wave",
+     "mediaShortName": "San Diego Wave",
+     "countryCode": null,
+     "teamType": null,
+     "overallSummary": null,
+     "stadium": null
+    },
+    {
+     "stats": [
+      {
+       "statsId": "rank",
+       "statsValue": 3
+      },
+      {
+       "statsId": "team",
+       "statsValue": null
+      },
+      {
+       "statsId": "points",
+       "statsValue": 55
+      },
+      {
+       "statsId": "matches-played",
+       "statsValue": 30
+      },
+      {
+       "statsId": "win",
+       "statsValue": 17
+      },
+      {
+       "statsId": "draw",
+       "statsValue": 4
+      },
+      {
+       "statsId": "lose",
+       "statsValue": 9
+      },
+      {
+       "statsId": "goals-for",
+       "statsValue": 43
+      },
+      {
+       "statsId": "goals-against",
+       "statsValue": 28
+      },
+      {
+       "statsId": "goal-difference",
+       "statsValue": 15
+      },
+      {
+       "statsId": "movement",
+       "statsValue": "stable"
+      },
+      {
+       "statsId": "form",
+       "statsValue": [
+        {
+         "formLabel": "Win",
+         "formLabelAbbreviation": "W",
+         "formType": "W"
+        },
+        {
+         "formLabel": "Lose",
+         "formLabelAbbreviation": "L",
+         "formType": "L"
+        },
+        {
+         "formLabel": "Win",
+         "formLabelAbbreviation": "W",
+         "formType": "W"
+        },
+        {
+         "formLabel": "Win",
+         "formLabelAbbreviation": "W",
+         "formType": "W"
+        },
+        {
+         "formLabel": "Lose",
+         "formLabelAbbreviation": "L",
+         "formType": "L"
+        },
+        {
+         "formLabel": "Win",
+         "formLabelAbbreviation": "W",
+         "formType": "W"
+        }
+       ]
+      }
+     ],
+     "qualification": {
+      "qualificationId": 0,
+      "qualificationLabel": "Final Series"
+     },
+     "achievementStatuses": [],
+     "note": null,
+     "teamId": "nwsl::Football_Team::c31d72afc09f42ee86418633aa41390a",
+     "providerId": "opta:Team:f1ks82wpiewyqs6h3oz9v4hzj",
+     "shortName": "Spirit",
+     "officialName": "Washington Spirit",
+     "acronymName": "WAS",
+     "acronymNameLocalized": "WAS",
+     "isTeamFake": false,
+     "mediaName": "Spirit",
+     "mediaShortName": "Spirit",
+     "countryCode": null,
+     "teamType": null,
+     "overallSummary": null,
+     "stadium": null
+    }
+   ],
+   "legenda": [],
+   "apiCallRequestTime": "0001-01-01T00:00:00"
+  },
+  {
+   "competition": {
+    "seasonId": "nwsl::Football_Season::0b6761e4701749f593690c0f338da74c",
+    "startDateUtc": "2026-03-14T00:00:00Z",
+    "endDateUtc": "2026-11-21T00:00:00Z",
+    "seasonName": "2026",
+    "competitionId": "nwsl::Football_Competition::3293333447504e83986ec13e794b68ea",
+    "providerId": "opta:Competition:djkvh1luqdkdixpoe653lzixg",
+    "name": "NWSL",
+    "officialName": "NWSL",
+    "shortName": "NWSL",
+    "acronymName": "NWSL"
+   },
+   "type": "home",
+   "teams": [
+    {
+     "stats": [
+      {
+       "statsId": "rank",
+       "statsValue": 1
+      },
+      {
+       "statsId": "team",
+       "statsValue": null
+      },
+      {
+       "statsId": "points",
+       "statsValue": 37
+      },
+      {
+       "statsId": "matches-played",
+       "statsValue": 15
+      },
+      {
+       "statsId": "win",
+       "statsValue": 11
+      },
+      {
+       "statsId": "draw",
+       "statsValue": 4
+      },
+      {
+       "statsId": "lose",
+       "statsValue": 0
+      },
+      {
+       "statsId": "goals-for",
+       "statsValue": 39
+      },
+      {
+       "statsId": "goals-against",
+       "statsValue": 15
+      },
+      {
+       "statsId": "goal-difference",
+       "statsValue": 24
+      },
+      {
+       "statsId": "movement",
+       "statsValue": "stable"
+      }
+     ],
+     "qualification": null,
+     "achievementStatuses": [],
+     "note": null,
+     "teamId": "nwsl::Football_Team::2c1699409ff84c9eb491aeaca3d3edde",
+     "providerId": "opta:Team:agxipc0vk4rtg09amjxv10nx0",
+     "shortName": "KC Current",
+     "officialName": "Kansas City Current",
+     "acronymName": "KC",
+     "acronymNameLocalized": "KC",
+     "isTeamFake": false,
+     "mediaName": "KC Current",
+     "mediaShortName": "KC Current",
+     "countryCode": null,
+     "teamType": null,
+     "overallSummary": null,
+     "stadium": null
+    },
+    {
+     "stats": [
+      {
+       "statsId": "rank",
+       "statsValue": 2
+      },
+      {
+       "statsId": "team",
+       "statsValue": null
+      },
+      {
+       "statsId": "points",
+       "statsValue": 32
+      },
+      {
+       "statsId": "matches-played",
+       "statsValue": 15
+      },
+      {
+       "statsId": "win",
+       "statsValue": 9
+      },
+      {
+       "statsId": "draw",
+       "statsValue": 5
+      },
+      {
+       "statsId": "lose",
+       "statsValue": 1
+      },
+      {
+       "statsId": "goals-for",
+       "statsValue": 20
+      },
+      {
+       "statsId": "goals-against",
+       "statsValue": 9
+      },
+      {
+       "statsId": "goal-difference",
+       "statsValue": 11
+      },
+      {
+       "statsId": "movement",
+       "statsValue": "stable"
+      }
+     ],
+     "qualification": null,
+     "achievementStatuses": [],
+     "note": null,
+     "teamId": "nwsl::Football_Team::c83f2ca05aa84c738b5373f0d2a31b39",
+     "providerId": "opta:Team:bgkfdckqfqnfbmecbtz03n76d",
+     "shortName": "Gotham FC",
+     "officialName": "Gotham FC",
+     "acronymName": "GFC",
+     "acronymNameLocalized": "GFC",
+     "isTeamFake": false,
+     "mediaName": "Gotham FC",
+     "mediaShortName": "Gotham FC",
+     "countryCode": null,
+     "teamType": null,
+     "overallSummary": null,
+     "stadium": null
+    },
+    {
+     "stats": [
+      {
+       "statsId": "rank",
+       "statsValue": 3
+      },
+      {
+       "statsId": "team",
+       "statsValue": null
+      },
+      {
+       "statsId": "points",
+       "statsValue": 29
+      },
+      {
+       "statsId": "matches-played",
+       "statsValue": 15
+      },
+      {
+       "statsId": "win",
+       "statsValue": 8
+      },
+      {
+       "statsId": "draw",
+       "statsValue": 5
+      },
+      {
+       "statsId": "lose",
+       "statsValue": 2
+      },
+      {
+       "statsId": "goals-for",
+       "statsValue": 25
+      },
+      {
+       "statsId": "goals-against",
+       "statsValue": 13
+      },
+      {
+       "statsId": "goal-difference",
+       "statsValue": 12
+      },
+      {
+       "statsId": "movement",
+       "statsValue": "stable"
+      }
+     ],
+     "qualification": null,
+     "achievementStatuses": [],
+     "note": null,
+     "teamId": "nwsl::Football_Team::96ba7b37bd8544a1a7329183459150ff",
+     "providerId": "opta:Team:446mp88j1vpk9iwui9fiifrp8",
+     "shortName": "Thorns",
+     "officialName": "Portland Thorns FC",
+     "acronymName": "POR",
+     "acronymNameLocalized": "POR",
+     "isTeamFake": false,
+     "mediaName": "Thorns",
+     "mediaShortName": "Thorns",
+     "countryCode": null,
+     "teamType": null,
+     "overallSummary": null,
+     "stadium": null
+    }
+   ],
+   "legenda": [],
+   "apiCallRequestTime": "0001-01-01T00:00:00"
+  },
+  {
+   "competition": {
+    "seasonId": "nwsl::Football_Season::0b6761e4701749f593690c0f338da74c",
+    "startDateUtc": "2026-03-14T00:00:00Z",
+    "endDateUtc": "2026-11-21T00:00:00Z",
+    "seasonName": "2026",
+    "competitionId": "nwsl::Football_Competition::3293333447504e83986ec13e794b68ea",
+    "providerId": "opta:Competition:djkvh1luqdkdixpoe653lzixg",
+    "name": "NWSL",
+    "officialName": "NWSL",
+    "shortName": "NWSL",
+    "acronymName": "NWSL"
+   },
+   "type": "away",
+   "teams": [
+    {
+     "stats": [
+      {
+       "statsId": "rank",
+       "statsValue": 1
+      },
+      {
+       "statsId": "team",
+       "statsValue": null
+      },
+      {
+       "statsId": "points",
+       "statsValue": 32
+      },
+      {
+       "statsId": "matches-played",
+       "statsValue": 15
+      },
+      {
+       "statsId": "win",
+       "statsValue": 10
+      },
+      {
+       "statsId": "draw",
+       "statsValue": 2
+      },
+      {
+       "statsId": "lose",
+       "statsValue": 3
+      },
+      {
+       "statsId": "goals-for",
+       "statsValue": 22
+      },
+      {
+       "statsId": "goals-against",
+       "statsValue": 14
+      },
+      {
+       "statsId": "goal-difference",
+       "statsValue": 8
+      },
+      {
+       "statsId": "movement",
+       "statsValue": "stable"
+      }
+     ],
+     "qualification": null,
+     "achievementStatuses": [],
+     "note": null,
+     "teamId": "nwsl::Football_Team::ca719042b34443c4bcfe380ca4850eaf",
+     "providerId": "opta:Team:esvbnzqbyvxp2k570ez7h1a1g",
+     "shortName": "San Diego Wave",
+     "officialName": "San Diego Wave FC",
+     "acronymName": "SD",
+     "acronymNameLocalized": "SD",
+     "isTeamFake": false,
+     "mediaName": "San Diego Wave",
+     "mediaShortName": "San Diego Wave",
+     "countryCode": null,
+     "teamType": null,
+     "overallSummary": null,
+     "stadium": null
+    },
+    {
+     "stats": [
+      {
+       "statsId": "rank",
+       "statsValue": 2
+      },
+      {
+       "statsId": "team",
+       "statsValue": null
+      },
+      {
+       "statsId": "points",
+       "statsValue": 30
+      },
+      {
+       "statsId": "matches-played",
+       "statsValue": 15
+      },
+      {
+       "statsId": "win",
+       "statsValue": 9
+      },
+      {
+       "statsId": "draw",
+       "statsValue": 3
+      },
+      {
+       "statsId": "lose",
+       "statsValue": 3
+      },
+      {
+       "statsId": "goals-for",
+       "statsValue": 25
+      },
+      {
+       "statsId": "goals-against",
+       "statsValue": 14
+      },
+      {
+       "statsId": "goal-difference",
+       "statsValue": 11
+      },
+      {
+       "statsId": "movement",
+       "statsValue": "stable"
+      }
+     ],
+     "qualification": null,
+     "achievementStatuses": [],
+     "note": null,
+     "teamId": "nwsl::Football_Team::c31d72afc09f42ee86418633aa41390a",
+     "providerId": "opta:Team:f1ks82wpiewyqs6h3oz9v4hzj",
+     "shortName": "Spirit",
+     "officialName": "Washington Spirit",
+     "acronymName": "WAS",
+     "acronymNameLocalized": "WAS",
+     "isTeamFake": false,
+     "mediaName": "Spirit",
+     "mediaShortName": "Spirit",
+     "countryCode": null,
+     "teamType": null,
+     "overallSummary": null,
+     "stadium": null
+    },
+    {
+     "stats": [
+      {
+       "statsId": "rank",
+       "statsValue": 3
+      },
+      {
+       "statsId": "team",
+       "statsValue": null
+      },
+      {
+       "statsId": "points",
+       "statsValue": 29
+      },
+      {
+       "statsId": "matches-played",
+       "statsValue": 15
+      },
+      {
+       "statsId": "win",
+       "statsValue": 9
+      },
+      {
+       "statsId": "draw",
+       "statsValue": 2
+      },
+      {
+       "statsId": "lose",
+       "statsValue": 4
+      },
+      {
+       "statsId": "goals-for",
+       "statsValue": 19
+      },
+      {
+       "statsId": "goals-against",
+       "statsValue": 14
+      },
+      {
+       "statsId": "goal-difference",
+       "statsValue": 5
+      },
+      {
+       "statsId": "movement",
+       "statsValue": "stable"
+      }
+     ],
+     "qualification": null,
+     "achievementStatuses": [],
+     "note": null,
+     "teamId": "nwsl::Football_Team::c83f2ca05aa84c738b5373f0d2a31b39",
+     "providerId": "opta:Team:bgkfdckqfqnfbmecbtz03n76d",
+     "shortName": "Gotham FC",
+     "officialName": "Gotham FC",
+     "acronymName": "GFC",
+     "acronymNameLocalized": "GFC",
+     "isTeamFake": false,
+     "mediaName": "Gotham FC",
+     "mediaShortName": "Gotham FC",
+     "countryCode": null,
+     "teamType": null,
+     "overallSummary": null,
+     "stadium": null
+    }
+   ],
+   "legenda": [],
+   "apiCallRequestTime": "0001-01-01T00:00:00"
+  }
+ ],
+ "apiCallRequestTime": "2026-11-10T17:33:17.3384586+00:00"
+}

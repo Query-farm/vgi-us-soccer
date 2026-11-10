@@ -1,0 +1,374 @@
+{
+ "competition": {
+  "seasonId": "nwsl::Football_Season::0b6761e4701749f593690c0f338da74c",
+  "tournamentName": null,
+  "competitionId": "nwsl::Football_Competition::3293333447504e83986ec13e794b68ea",
+  "providerId": "opta:Competition:djkvh1luqdkdixpoe653lzixg",
+  "name": "NWSL",
+  "officialName": "NWSL",
+  "shortName": null,
+  "acronymName": null
+ },
+ "teams": [
+  {
+   "stats": [
+    {
+     "statsId": "games-played",
+     "statsValue": 30
+    },
+    {
+     "statsId": "total-points",
+     "statsValue": 27
+    },
+    {
+     "statsId": "total-wins",
+     "statsValue": 7
+    },
+    {
+     "statsId": "total-losses",
+     "statsValue": 17
+    },
+    {
+     "statsId": "total-draws",
+     "statsValue": 6
+    },
+    {
+     "statsId": "goals",
+     "statsValue": 30
+    },
+    {
+     "statsId": "goals-against",
+     "statsValue": 47
+    },
+    {
+     "statsId": "fouls-committed",
+     "statsValue": 296
+    },
+    {
+     "statsId": "yellow-cards",
+     "statsValue": 40
+    },
+    {
+     "statsId": "red-cards",
+     "statsValue": 3
+    },
+    {
+     "statsId": "corners",
+     "statsValue": 126
+    },
+    {
+     "statsId": "Possession Percentage",
+     "statsValue": 49.6
+    },
+    {
+     "statsId": "Clean Sheets",
+     "statsValue": 7
+    },
+    {
+     "statsId": "Interceptions",
+     "statsValue": 320
+    },
+    {
+     "statsId": "PPDA",
+     "statsValue": 10.6
+    },
+    {
+     "statsId": "Passing Accuracy",
+     "statsValue": 78.36
+    },
+    {
+     "statsId": "Recoveries",
+     "statsValue": 1600
+    },
+    {
+     "statsId": "Shots On Target ( inc goals )",
+     "statsValue": 138
+    },
+    {
+     "statsId": "Tackles Won",
+     "statsValue": 373
+    },
+    {
+     "statsId": "Total Clearances",
+     "statsValue": 748
+    },
+    {
+     "statsId": "Total Passes",
+     "statsValue": 11688
+    },
+    {
+     "statsId": "Total Shots",
+     "statsValue": 290
+    },
+    {
+     "statsId": "Total Shots Conceded",
+     "statsValue": 420
+    },
+    {
+     "statsId": "Home Goals",
+     "statsValue": 16
+    },
+    {
+     "statsId": "Away Goals",
+     "statsValue": 14
+    }
+   ],
+   "rankLabel": null,
+   "teamId": "nwsl::Football_Team::19674698cec24f53af8866cd21abaf8f",
+   "providerId": "opta:Team:eka22bj7co8bw5qxa6qlbinf8",
+   "shortName": "Bay",
+   "officialName": "Bay FC",
+   "acronymName": "BAY",
+   "acronymNameLocalized": "BAY",
+   "isTeamFake": false,
+   "mediaName": "Bay FC",
+   "mediaShortName": "Bay",
+   "countryCode": "US",
+   "teamType": "club",
+   "overallSummary": null,
+   "stadium": null
+  },
+  {
+   "stats": [
+    {
+     "statsId": "games-played",
+     "statsValue": 30
+    },
+    {
+     "statsId": "total-points",
+     "statsValue": 33
+    },
+    {
+     "statsId": "total-wins",
+     "statsValue": 9
+    },
+    {
+     "statsId": "total-losses",
+     "statsValue": 15
+    },
+    {
+     "statsId": "total-draws",
+     "statsValue": 6
+    },
+    {
+     "statsId": "goals",
+     "statsValue": 41
+    },
+    {
+     "statsId": "goals-against",
+     "statsValue": 53
+    },
+    {
+     "statsId": "fouls-committed",
+     "statsValue": 362
+    },
+    {
+     "statsId": "yellow-cards",
+     "statsValue": 45
+    },
+    {
+     "statsId": "red-cards",
+     "statsValue": 3
+    },
+    {
+     "statsId": "corners",
+     "statsValue": 125
+    },
+    {
+     "statsId": "Possession Percentage",
+     "statsValue": 52.8
+    },
+    {
+     "statsId": "Clean Sheets",
+     "statsValue": 4
+    },
+    {
+     "statsId": "Interceptions",
+     "statsValue": 303
+    },
+    {
+     "statsId": "PPDA",
+     "statsValue": 9.7
+    },
+    {
+     "statsId": "Passing Accuracy",
+     "statsValue": 80.26
+    },
+    {
+     "statsId": "Recoveries",
+     "statsValue": 1661
+    },
+    {
+     "statsId": "Shots On Target ( inc goals )",
+     "statsValue": 131
+    },
+    {
+     "statsId": "Tackles Won",
+     "statsValue": 355
+    },
+    {
+     "statsId": "Total Clearances",
+     "statsValue": 642
+    },
+    {
+     "statsId": "Total Passes",
+     "statsValue": 12552
+    },
+    {
+     "statsId": "Total Shots",
+     "statsValue": 308
+    },
+    {
+     "statsId": "Total Shots Conceded",
+     "statsValue": 378
+    },
+    {
+     "statsId": "Home Goals",
+     "statsValue": 23
+    },
+    {
+     "statsId": "Away Goals",
+     "statsValue": 18
+    }
+   ],
+   "rankLabel": null,
+   "teamId": "nwsl::Football_Team::d2d8efe548734dfd8bc667b5a52a079a",
+   "providerId": "opta:Team:2yppf5jwqllc49s0qkbkchvkk",
+   "shortName": "Boston Legacy",
+   "officialName": "Boston Legacy FC",
+   "acronymName": "BOS",
+   "acronymNameLocalized": "BOS",
+   "isTeamFake": false,
+   "mediaName": "Boston Legacy FC",
+   "mediaShortName": "Boston Legacy",
+   "countryCode": "US",
+   "teamType": "club",
+   "overallSummary": null,
+   "stadium": null
+  },
+  {
+   "stats": [
+    {
+     "statsId": "games-played",
+     "statsValue": 30
+    },
+    {
+     "statsId": "total-points",
+     "statsValue": 17
+    },
+    {
+     "statsId": "total-wins",
+     "statsValue": 5
+    },
+    {
+     "statsId": "total-losses",
+     "statsValue": 23
+    },
+    {
+     "statsId": "total-draws",
+     "statsValue": 2
+    },
+    {
+     "statsId": "goals",
+     "statsValue": 17
+    },
+    {
+     "statsId": "goals-against",
+     "statsValue": 71
+    },
+    {
+     "statsId": "fouls-committed",
+     "statsValue": 315
+    },
+    {
+     "statsId": "yellow-cards",
+     "statsValue": 30
+    },
+    {
+     "statsId": "red-cards",
+     "statsValue": 0
+    },
+    {
+     "statsId": "corners",
+     "statsValue": 98
+    },
+    {
+     "statsId": "Possession Percentage",
+     "statsValue": 44.9
+    },
+    {
+     "statsId": "Clean Sheets",
+     "statsValue": 3
+    },
+    {
+     "statsId": "Interceptions",
+     "statsValue": 299
+    },
+    {
+     "statsId": "PPDA",
+     "statsValue": 13.4
+    },
+    {
+     "statsId": "Passing Accuracy",
+     "statsValue": 76.95
+    },
+    {
+     "statsId": "Recoveries",
+     "statsValue": 1434
+    },
+    {
+     "statsId": "Shots On Target ( inc goals )",
+     "statsValue": 88
+    },
+    {
+     "statsId": "Tackles Won",
+     "statsValue": 321
+    },
+    {
+     "statsId": "Total Clearances",
+     "statsValue": 761
+    },
+    {
+     "statsId": "Total Passes",
+     "statsValue": 10529
+    },
+    {
+     "statsId": "Total Shots",
+     "statsValue": 210
+    },
+    {
+     "statsId": "Total Shots Conceded",
+     "statsValue": 544
+    },
+    {
+     "statsId": "Home Goals",
+     "statsValue": 12
+    },
+    {
+     "statsId": "Away Goals",
+     "statsValue": 5
+    }
+   ],
+   "rankLabel": null,
+   "teamId": "nwsl::Football_Team::269e825b853f4b43a9d38390aa92bf6e",
+   "providerId": "opta:Team:dzxypx8djih58p668surbi4qm",
+   "shortName": "Chicago Stars",
+   "officialName": "Chicago Stars FC",
+   "acronymName": "CHI",
+   "acronymNameLocalized": "CHI",
+   "isTeamFake": false,
+   "mediaName": "Chicago Stars FC",
+   "mediaShortName": "Chicago Stars",
+   "countryCode": "US",
+   "teamType": "club",
+   "overallSummary": null,
+   "stadium": null
+  }
+ ],
+ "pagination": {
+  "totalPages": 1,
+  "currentPage": 1,
+  "isLastPage": true
+ },
+ "apiCallRequestTime": "2026-11-10T17:33:20.4655779+00:00"
+}

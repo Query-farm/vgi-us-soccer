@@ -1,0 +1,20 @@
+{
+ "seasons": [
+  {
+   "season_id": "MLS-SEA-0002KB",
+   "season": 2027
+  },
+  {
+   "season_id": "MLS-SEA-0001KA",
+   "season": 2026
+  },
+  {
+   "season_id": "MLS-SEA-0001K9",
+   "season": 2025
+  },
+  {
+   "season_id": "MLS-SEA-0001K8",
+   "season": 2024
+  }
+ ]
+}

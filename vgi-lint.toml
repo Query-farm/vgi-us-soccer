@@ -1,0 +1,43 @@
+location = "uv run --project . vgi-us-soccer"
+select = ["ALL"]
+fail_on = "warning"
+
+ignore = [
+  { code = "VGI311", kind = "tooling-bug", reason = """\
+Each parameterless all_* scan is exposed as its corresponding table (all_current_standings as \
+current_standings, all_competitions as competitions, and so on; see worker.py). The rule only \
+recognizes a function and table that share a name, but a function and a table cannot share a \
+name inside one schema, so the deliberate all_* prefix avoids that collision.\
+""" },
+]
+
+# The all_* functions are the scans behind the read-only tables. Agent tasks exercise the public
+# tables (current_standings, competitions, ...), which invoke these scans; teaching agents to call
+# the implementation functions directly would undermine the table abstraction. The hermetic
+# Haybarn end-to-end test separately reads every table and therefore every backing scan.
+[per_object."us_soccer.mls.all_competitions"]
+ignore = [{ code = "VGI520", kind = "domain-exemption", reason = "Backing scan of mls.competitions, which agent task mls_next_pro_2025 exercises." }]
+
+[per_object."us_soccer.mls.all_current_standings"]
+ignore = [{ code = "VGI520", kind = "domain-exemption", reason = "Backing scan of mls.current_standings, which agent task mls_table_leader exercises." }]
+
+[per_object."us_soccer.mls.all_current_club_stats"]
+ignore = [{ code = "VGI520", kind = "domain-exemption", reason = "Backing scan of mls.current_club_stats, which agent task mls_table_leader exercises." }]
+
+[per_object."us_soccer.mls.all_current_player_stats"]
+ignore = [{ code = "VGI520", kind = "domain-exemption", reason = "Backing scan of mls.current_player_stats, which agent task mls_table_leader exercises." }]
+
+[per_object."us_soccer.mls.all_current_schedule"]
+ignore = [{ code = "VGI520", kind = "domain-exemption", reason = "Backing scan of mls.current_schedule, which agent task mls_table_leader exercises." }]
+
+[per_object."us_soccer.nwsl.all_competitions"]
+ignore = [{ code = "VGI520", kind = "domain-exemption", reason = "Backing scan of nwsl.competitions, which agent task nwsl_2025_table exercises." }]
+
+[per_object."us_soccer.nwsl.all_current_standings"]
+ignore = [{ code = "VGI520", kind = "domain-exemption", reason = "Backing scan of nwsl.current_standings, which agent task nwsl_2026_scorer exercises." }]
+
+[per_object."us_soccer.nwsl.all_current_player_stats"]
+ignore = [{ code = "VGI520", kind = "domain-exemption", reason = "Backing scan of nwsl.current_player_stats, which agent task nwsl_2026_scorer exercises." }]
+
+[per_object."us_soccer.nwsl.all_current_matches"]
+ignore = [{ code = "VGI520", kind = "domain-exemption", reason = "Backing scan of nwsl.current_matches, which agent task nwsl_2026_scorer exercises." }]

@@ -1,0 +1,29 @@
+[
+ {
+  "player_id": "0Oq624oPq6",
+  "team_id": "jYQJ19EqGR",
+  "season_name": 2026,
+  "position": "D",
+  "base_salary": 113400,
+  "guaranteed_compensation": 113400,
+  "mlspa_release": "2026-04-16"
+ },
+ {
+  "player_id": "0Oq624zdq6",
+  "team_id": "APk5LGOMOW",
+  "season_name": 2026,
+  "position": "F",
+  "base_salary": 400000,
+  "guaranteed_compensation": 451333,
+  "mlspa_release": "2026-04-16"
+ },
+ {
+  "player_id": "0Oq62JVPq6",
+  "team_id": "a2lqRX2Mr0",
+  "season_name": 2026,
+  "position": "M",
+  "base_salary": 210000,
+  "guaranteed_compensation": 222500,
+  "mlspa_release": "2026-04-16"
+ }
+]

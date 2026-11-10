@@ -1,0 +1,95 @@
+{
+ "competition": {
+  "seasonId": "nwsl::Football_Season::0b6761e4701749f593690c0f338da74c",
+  "startDateUtc": "2026-03-14T00:00:00Z",
+  "endDateUtc": "2026-11-21T00:00:00Z",
+  "seasonName": "2026",
+  "competitionId": "nwsl::Football_Competition::3293333447504e83986ec13e794b68ea",
+  "providerId": "opta:Competition:djkvh1luqdkdixpoe653lzixg",
+  "name": "NWSL",
+  "officialName": "NWSL",
+  "shortName": "NWSL",
+  "acronymName": "NWSL"
+ },
+ "teams": [
+  {
+   "teamId": "nwsl::Football_Team::1151140adfc24339ba1c93cb0b6b0238",
+   "providerId": "opta:Team:bl53jk6zlfe5f583pil7xzwi5",
+   "shortName": "Seattle Reign",
+   "officialName": "Seattle Reign FC",
+   "acronymName": "SEA",
+   "acronymNameLocalized": "SEA",
+   "isTeamFake": false,
+   "mediaName": "Seattle Reign FC",
+   "mediaShortName": "Seattle Reign",
+   "countryCode": "US",
+   "teamType": "club",
+   "overallSummary": "",
+   "stadium": {
+    "id": "nwsl::Football_Stadium::5a196ebf1d69422880020401b49b2017",
+    "providerId": "opta:Stadium:3qzctivukan8gr0ip1xc2iy7u",
+    "name": "Seattle Stadium",
+    "cityName": "Seattle, Washington",
+    "country": "US",
+    "address": "800 Occidental Avenue South",
+    "capacity": 69000,
+    "yearOfConstruction": 2002,
+    "mapsGeoCodeLatitude": "47.595163157",
+    "mapsGeoCodeLongitude": "-122.331631780"
+   }
+  },
+  {
+   "teamId": "nwsl::Football_Team::19674698cec24f53af8866cd21abaf8f",
+   "providerId": "opta:Team:eka22bj7co8bw5qxa6qlbinf8",
+   "shortName": "Bay",
+   "officialName": "Bay FC",
+   "acronymName": "BAY",
+   "acronymNameLocalized": "BAY",
+   "isTeamFake": false,
+   "mediaName": "Bay FC",
+   "mediaShortName": "Bay",
+   "countryCode": "US",
+   "teamType": "club",
+   "overallSummary": "",
+   "stadium": {
+    "id": "nwsl::Football_Stadium::649a315a1c32412f84a89fbe19675224",
+    "providerId": "opta:Stadium:a0hfby1ughw4lsop05ugapbl5",
+    "name": "PayPal Park",
+    "cityName": "San Jose, California",
+    "country": "US",
+    "address": "1123 Coleman Avenue",
+    "capacity": 18251,
+    "yearOfConstruction": 2015,
+    "mapsGeoCodeLatitude": "37.351179292",
+    "mapsGeoCodeLongitude": "-121.924619026"
+   }
+  },
+  {
+   "teamId": "nwsl::Football_Team::269e825b853f4b43a9d38390aa92bf6e",
+   "providerId": "opta:Team:dzxypx8djih58p668surbi4qm",
+   "shortName": "Chicago Stars",
+   "officialName": "Chicago Stars FC",
+   "acronymName": "CHI",
+   "acronymNameLocalized": "CHI",
+   "isTeamFake": false,
+   "mediaName": "Chicago Stars FC",
+   "mediaShortName": "Chicago Stars",
+   "countryCode": "US",
+   "teamType": "club",
+   "overallSummary": "",
+   "stadium": {
+    "id": "nwsl::Football_Stadium::c4549b143bff479990c4dddbc5bb6149",
+    "providerId": "opta:Stadium:eq9wxbgce944xpvbqz6bgda7d",
+    "name": "Northwestern Medicine Field at Martin Stadium",
+    "cityName": "Evanston, Illinois",
+    "country": "US",
+    "address": "2235 Campus Drive",
+    "capacity": 12000,
+    "yearOfConstruction": 0,
+    "mapsGeoCodeLatitude": "42.058348283",
+    "mapsGeoCodeLongitude": "-87.670785904"
+   }
+  }
+ ],
+ "apiCallRequestTime": "2026-11-10T17:33:18.0209107+00:00"
+}

@@ -1,0 +1,46 @@
+{
+ "clubs": [
+  {
+   "club_id": "MLS-CLU-000001",
+   "club_name": "Los Angeles Football Club",
+   "three_letter_code": "LAFC",
+   "short_name": "LAFC",
+   "club_short_name": "LAFC",
+   "club_three_letter_code": "LAFC",
+   "city": "Los Angeles, CA",
+   "country": "USA",
+   "competition_id": "MLS-COM-000001",
+   "competition_name": "Major League Soccer - Regular Season",
+   "season_id": "MLS-SEA-0001KA",
+   "season": 2026
+  },
+  {
+   "club_id": "MLS-CLU-000002",
+   "club_name": "Philadelphia Union",
+   "three_letter_code": "PHI",
+   "short_name": "Philadelphia",
+   "club_short_name": "Philadelphia",
+   "club_three_letter_code": "PHI",
+   "city": "Chester, PA",
+   "country": "USA",
+   "competition_id": "MLS-COM-000001",
+   "competition_name": "Major League Soccer - Regular Season",
+   "season_id": "MLS-SEA-0001KA",
+   "season": 2026
+  },
+  {
+   "club_id": "MLS-CLU-000003",
+   "club_name": "Austin FC",
+   "three_letter_code": "ATX",
+   "short_name": "Austin",
+   "club_short_name": "Austin",
+   "club_three_letter_code": "ATX",
+   "city": "Austin, TX",
+   "country": "USA",
+   "competition_id": "MLS-COM-000001",
+   "competition_name": "Major League Soccer - Regular Season",
+   "season_id": "MLS-SEA-0001KA",
+   "season": 2026
+  }
+ ]
+}

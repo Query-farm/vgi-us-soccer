@@ -1,0 +1,47 @@
+[
+ {
+  "team_id": "0KPqjA456v",
+  "count_games": 34,
+  "shots_for": 454,
+  "shots_against": 429,
+  "goals_for": 56,
+  "goals_against": 49,
+  "goal_difference": 7,
+  "xgoals_for": 62.5614,
+  "xgoals_against": 52.6909,
+  "xgoal_difference": 9.8705,
+  "goal_difference_minus_xgoal_difference": -2.8705,
+  "points": 52,
+  "xpoints": 51.785
+ },
+ {
+  "team_id": "19vQ2095K6",
+  "count_games": 34,
+  "shots_for": 410,
+  "shots_against": 474,
+  "goals_for": 55,
+  "goals_against": 45,
+  "goal_difference": 10,
+  "xgoals_for": 52.4335,
+  "xgoals_against": 56.942,
+  "xgoal_difference": -4.5086,
+  "goal_difference_minus_xgoal_difference": 14.5086,
+  "points": 58,
+  "xpoints": 43.168
+ },
+ {
+  "team_id": "9z5k7Yg5A3",
+  "count_games": 34,
+  "shots_for": 565,
+  "shots_against": 310,
+  "goals_for": 63,
+  "goals_against": 51,
+  "goal_difference": 12,
+  "xgoals_for": 70.2726,
+  "xgoals_against": 49.0774,
+  "xgoal_difference": 21.1952,
+  "goal_difference_minus_xgoal_difference": -9.1952,
+  "points": 50,
+  "xpoints": 57.996
+ }
+]

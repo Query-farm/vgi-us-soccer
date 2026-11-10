@@ -1,0 +1,185 @@
+{
+ "competition": {
+  "seasonId": "nwsl::Football_Season::0b6761e4701749f593690c0f338da74c",
+  "startDateUtc": "2026-03-14T00:00:00Z",
+  "endDateUtc": "2026-11-21T00:00:00Z",
+  "seasonName": "2026",
+  "competitionId": "nwsl::Football_Competition::3293333447504e83986ec13e794b68ea",
+  "providerId": "opta:Competition:djkvh1luqdkdixpoe653lzixg",
+  "name": "NWSL",
+  "officialName": "NWSL",
+  "shortName": "NWSL",
+  "acronymName": "NWSL"
+ },
+ "team": {
+  "teamId": "nwsl::Football_Team::c83f2ca05aa84c738b5373f0d2a31b39",
+  "providerId": "opta:Team:bgkfdckqfqnfbmecbtz03n76d",
+  "shortName": "Gotham FC",
+  "officialName": "Gotham FC",
+  "acronymName": "GFC",
+  "acronymNameLocalized": "GFC",
+  "isTeamFake": false,
+  "mediaName": "Gotham FC",
+  "mediaShortName": "Gotham FC",
+  "countryCode": "US",
+  "teamType": "club",
+  "overallSummary": null,
+  "stadium": null
+ },
+ "players": [
+  {
+   "info": [
+    {
+     "infoId": "player",
+     "infoLabel": "Player",
+     "infoLabelAbbreviation": "Player",
+     "infoValue": "G. Reiten"
+    },
+    {
+     "infoId": "jersey",
+     "infoLabel": "Jersey",
+     "infoLabelAbbreviation": "Jersey",
+     "infoValue": 18
+    },
+    {
+     "infoId": "position",
+     "infoLabel": "Position",
+     "infoLabelAbbreviation": "Position",
+     "infoValue": "Forward"
+    },
+    {
+     "infoId": "age",
+     "infoLabel": "Age",
+     "infoLabelAbbreviation": "Age",
+     "infoValue": 32
+    }
+   ],
+   "dateOfBirth": "1994-07-26",
+   "height": "166",
+   "weight": "60",
+   "playerStatus": "Active",
+   "leaveDate": "",
+   "playerId": "nwsl::Football_Player::925b70520fdb41b3afd6477937c4d93c",
+   "providerId": "opta:Player:1cfhmihovl78l8osqbo1w9nth",
+   "bibNumber": "18",
+   "roleLabel": "Forward",
+   "role": 4,
+   "mediaFirstName": "Guro",
+   "mediaLastName": "Reiten",
+   "shirtName": "",
+   "shortName": "G. Reiten",
+   "displayName": "",
+   "nationality": "Norway",
+   "nationalityIsoCode": "NOR",
+   "apiCallRequestTime": "0001-01-01T00:00:00"
+  },
+  {
+   "info": [
+    {
+     "infoId": "player",
+     "infoLabel": "Player",
+     "infoLabelAbbreviation": "Player",
+     "infoValue": "J. Howell"
+    },
+    {
+     "infoId": "jersey",
+     "infoLabel": "Jersey",
+     "infoLabelAbbreviation": "Jersey",
+     "infoValue": 7
+    },
+    {
+     "infoId": "position",
+     "infoLabel": "Position",
+     "infoLabelAbbreviation": "Position",
+     "infoValue": "Midfielder"
+    },
+    {
+     "infoId": "age",
+     "infoLabel": "Age",
+     "infoLabelAbbreviation": "Age",
+     "infoValue": 26
+    }
+   ],
+   "dateOfBirth": "1999-11-21",
+   "height": "172",
+   "weight": "57",
+   "playerStatus": "Active",
+   "leaveDate": "",
+   "playerId": "nwsl::Football_Player::95d2c552a83342bc947134ce8db57d56",
+   "providerId": "opta:Player:1zjvb0kej2m1kp1sl0hw8tmuh",
+   "bibNumber": "7",
+   "roleLabel": "Midfielder",
+   "role": 3,
+   "mediaFirstName": "Jaelin",
+   "mediaLastName": "Howell",
+   "shirtName": "",
+   "shortName": "J. Howell",
+   "displayName": "",
+   "nationality": "USA",
+   "nationalityIsoCode": "USA",
+   "apiCallRequestTime": "0001-01-01T00:00:00"
+  },
+  {
+   "info": [
+    {
+     "infoId": "player",
+     "infoLabel": "Player",
+     "infoLabelAbbreviation": "Player",
+     "infoValue": "M. Whitham"
+    },
+    {
+     "infoId": "jersey",
+     "infoLabel": "Jersey",
+     "infoLabelAbbreviation": "Jersey",
+     "infoValue": null
+    },
+    {
+     "infoId": "position",
+     "infoLabel": "Position",
+     "infoLabelAbbreviation": "Position",
+     "infoValue": "Forward"
+    },
+    {
+     "infoId": "age",
+     "infoLabel": "Age",
+     "infoLabelAbbreviation": "Age",
+     "infoValue": 16
+    }
+   ],
+   "dateOfBirth": "2010-07-27",
+   "height": "",
+   "weight": "",
+   "playerStatus": "Active",
+   "leaveDate": "",
+   "playerId": "nwsl::Football_Player::5dd4fbaa307f41c49c9b499a16c99e2c",
+   "providerId": "opta:Player:24cu11uuudqo6rcklz6lx3fh0",
+   "bibNumber": "",
+   "roleLabel": "Forward",
+   "role": 4,
+   "mediaFirstName": "Mak",
+   "mediaLastName": "Whitham",
+   "shirtName": "",
+   "shortName": "M. Whitham",
+   "displayName": "",
+   "nationality": "USA",
+   "nationalityIsoCode": "USA",
+   "apiCallRequestTime": "0001-01-01T00:00:00"
+  }
+ ],
+ "officials": [
+  {
+   "status": "Active",
+   "providerId": "opta:Official:1jqsjp7e68uvnkyr5n5btoh78",
+   "shortName": "Juan Carlos Amorós",
+   "displayName": "",
+   "mediaFirstName": "Juan Carlos",
+   "mediaLastName": "Amorós",
+   "staffId": "nwsl::Football_Official::51c49f3e5a9442a0a228bb0c24a72af1",
+   "roleLabel": "Head Coach",
+   "nationality": "Spain",
+   "nationalityIsoCode": "ESP",
+   "dateOfBirth": "1984-06-03"
+  }
+ ],
+ "apiCallRequestTime": "2026-11-10T17:34:14.2469187+00:00"
+}
