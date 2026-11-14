@@ -145,13 +145,22 @@ def test_catalog_discovery_contract_is_public_and_machine_readable() -> None:
     assert len({task["name"] for task in tasks}) == len(tasks)
 
 
-def test_agent_task_sidecar_grades_every_public_task_with_check_sql() -> None:
+# Composed tasks whose answer only the judge can check: check_sql never sees the analyst's answer.
+JUDGE_GRADED_TASKS = {"nwsl_2025_goal_share", "asa_2025_bargain_gplus"}
+
+
+def test_agent_task_sidecar_grades_every_public_task() -> None:
     public = {task["name"] for task in json.loads(US_SOCCER_CATALOG.tags["vgi.agent_test_tasks"])}
     sidecar = yaml.safe_load((ROOT / "vgi-agent-tests.yaml").read_text())["tasks"]
     assert {task["name"] for task in sidecar} == public
     for task in sidecar:
-        assert task["check_sql"].strip().upper().startswith("SELECT")
         assert "reference_sql" not in task  # live data: exact compares cannot pass
+        if task["name"] in JUDGE_GRADED_TASKS:
+            # check_sql would outrank the judge and pass whatever the analyst answered.
+            assert "check_sql" not in task
+            assert task["success_criteria"].startswith("Pass only if")
+        else:
+            assert task["check_sql"].strip().upper().startswith("SELECT")
 
 
 def test_asa_objects_carry_the_cc_by_sa_licence() -> None:

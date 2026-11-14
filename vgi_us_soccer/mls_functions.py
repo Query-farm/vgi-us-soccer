@@ -170,8 +170,9 @@ def _meta_class(**kwargs: Any) -> type:
     return type("Meta", (), {"__doc__": "Function discovery metadata.", **_meta(**kwargs)})
 
 
-# Composed examples combine two of this schema's functions. Each is defined once here and listed both on
-# the function that drives the query and in the schema-level example list (see worker.py).
+# Composed examples combine two of this schema's functions. Each is defined once (this one here,
+# STARTER_BOX_SCORE_EXAMPLE beside the match functions) and listed both on the function that drives the
+# query and in the schema-level example list (see worker.py).
 PLAYER_GOAL_SHARE_EXAMPLE = (
     "2025 MLS players who scored the largest share of their club's regular-season goals, joining "
     "player_stats to the final standings.",
@@ -180,15 +181,6 @@ PLAYER_GOAL_SHARE_EXAMPLE = (
     "FROM us_soccer.mls.player_stats(season := 2025) AS p "
     "JOIN us_soccer.mls.standings(season := 2025) AS s USING (club_id) "
     "ORDER BY pct_of_club_goals DESC, p.player_name LIMIT 10",
-)
-STARTER_BOX_SCORE_EXAMPLE = (
-    "Minutes, shots, xG, and goals for every starter in MLS-MAT-0009NL, joining match_lineups to "
-    "match_player_stats.",
-    "SELECT l.club_abbreviation, l.shirt_number, l.player_name, s.minutes_played, s.shots, "
-    "round(s.xg, 2) AS xg, s.goals "
-    "FROM us_soccer.mls.match_lineups('MLS-MAT-0009NL') AS l "
-    "JOIN us_soccer.mls.match_player_stats('MLS-MAT-0009NL') AS s USING (player_id) "
-    "WHERE l.starter ORDER BY l.club_abbreviation, l.shirt_number",
 )
 
 
@@ -605,6 +597,17 @@ class CurrentScheduleFunction(Scan, TableFunctionGenerator[None]):
 # ------------------------------------------------------------------ match detail
 
 _MATCH_SQL = "'MLS-MAT-0009NL'"
+
+# A composed example (see PLAYER_GOAL_SHARE_EXAMPLE): driven by match_lineups().
+STARTER_BOX_SCORE_EXAMPLE = (
+    "Minutes, shots, xG, and goals for every starter in MLS-MAT-0009NL, joining match_lineups to "
+    "match_player_stats.",
+    "SELECT l.club_abbreviation, l.shirt_number, l.player_name, s.minutes_played, s.shots, "
+    "round(s.xg, 2) AS xg, s.goals "
+    f"FROM us_soccer.mls.match_lineups({_MATCH_SQL}) AS l "
+    f"JOIN us_soccer.mls.match_player_stats({_MATCH_SQL}) AS s USING (player_id) "
+    "WHERE l.starter ORDER BY l.club_abbreviation, l.shirt_number",
+)
 
 
 @init_single_worker

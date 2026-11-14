@@ -101,3 +101,43 @@ def test_asa_2025_regular_season() -> None:
     top = max(salaries, key=lambda row: row["guaranteed_compensation"] or 0)
     assert top["player_name"] == "Lionel Messi"
     assert asa.fetch_goals_added("nwsl", 2025, minimum_minutes=1000).rows
+
+
+def test_nwsl_2025_goal_share_task_answer() -> None:
+    """Pins the answer the judge expects for agent task nwsl_2025_goal_share."""
+    teams = {row["team_id"]: row for row in nwsl.fetch_standings(2025).rows}
+    shares = sorted(
+        (
+            (row["goals"] or 0) / teams[row["team_id"]]["goals_for"],
+            row["player_name"],
+            teams[row["team_id"]]["team_name"],
+            row["goals"],
+            teams[row["team_id"]]["goals_for"],
+        )
+        for row in nwsl.fetch_player_stats(2025).rows
+        if row["team_id"] in teams
+    )
+    assert shares[-1][1:] == ("Esther González", "Gotham FC", 13, 35)
+    assert shares[-1][0] - shares[-2][0] > 0.05  # not a near-tie
+
+
+def test_asa_2025_bargain_gplus_task_answer() -> None:
+    """Pins the answer the judge expects for agent task asa_2025_bargain_gplus."""
+    salaries = asa.fetch_salaries(2025).rows
+    latest = max(row["release_date"] for row in salaries)
+    cheap = {
+        (row["player_id"], row["team_id"])
+        for row in salaries
+        if row["release_date"] == latest and (row["guaranteed_compensation"] or 150_000) < 150_000
+    }
+    players = sorted(
+        (
+            row
+            for row in asa.fetch_goals_added("mls", 2025, minimum_minutes=1500).rows
+            if (row["player_id"], row["team_id"]) in cheap
+        ),
+        key=lambda row: row["goals_added_above_avg"],
+        reverse=True,
+    )
+    assert (players[0]["player_name"], players[0]["team_abbreviation"]) == ("Alex Freeman", "ORL")
+    assert players[0]["goals_added_above_avg"] - players[1]["goals_added_above_avg"] > 1.0
