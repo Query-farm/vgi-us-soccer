@@ -373,3 +373,7 @@ start.
 ---
 
 Copyright 2026 Query Farm LLC - https://query.farm
+
+## Executed notebooks
+
+[Explore minutes eligibility and ASA expected goals](notebooks/README.md) with a portable, executed Haybarn/VGI walkthrough.

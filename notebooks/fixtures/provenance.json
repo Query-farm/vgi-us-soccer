@@ -1,0 +1,43 @@
+{
+  "source": "American Soccer Analysis (americansocceranalysis.com)",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "notes": "Original public JSON response bytes. Directories and metric captured independently; not an atomic snapshot.",
+  "responses": [
+    {
+      "file": "xgoals.json",
+      "url": "https://app.americansocceranalysis.com/api/v1/mls/players/xgoals?season_name=2025&minimum_minutes=0&split_by_teams=true&stage_name=Regular+Season",
+      "path": "/mls/players/xgoals",
+      "parameters": {
+        "season_name": "2025",
+        "minimum_minutes": "0",
+        "split_by_teams": "true",
+        "stage_name": "Regular Season"
+      },
+      "captured_at_utc": "2026-11-14T10:33:47.363552+00:00",
+      "status": 200,
+      "rows": 882,
+      "sha256": "0241c4382ceee1e65d0c87f36808b4fcfe330831e6b13784a0e493dbe2ad6a28"
+    },
+    {
+      "file": "players.json",
+      "url": "https://app.americansocceranalysis.com/api/v1/mls/players",
+      "path": "/mls/players",
+      "parameters": {},
+      "captured_at_utc": "2026-11-14T10:33:48.451460+00:00",
+      "status": 200,
+      "rows": 3640,
+      "sha256": "6bcce24c8b1a3f0955f0681c100f3f06cec04ea97db05d336fbc9cdbb609fffd"
+    },
+    {
+      "file": "teams.json",
+      "url": "https://app.americansocceranalysis.com/api/v1/mls/teams",
+      "path": "/mls/teams",
+      "parameters": {},
+      "captured_at_utc": "2026-11-14T10:33:49.865714+00:00",
+      "status": 200,
+      "rows": 31,
+      "sha256": "0e353bf7eaeed41f6c08c07b4aeeb4c5b786d1e8dd7a6da5437c38a1de6fe14f"
+    }
+  ]
+}
