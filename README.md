@@ -142,6 +142,19 @@ window from seven days ago to fourteen days ahead, across every MLS-family
 competition. It can be empty in the off-season. Scores are `NULL` until
 kickoff.
 
+Functions combine with ordinary joins. Club ids match across `player_stats()`
+and `standings()`, so you can work out each scorer's share of their club's goals:
+
+```sql
+-- 2025 players who scored the largest share of their club's goals
+SELECT p.player_name, p.club_abbreviation, p.goals, s.goals_for AS club_goals,
+       round(100.0 * p.goals / s.goals_for, 1) AS pct_of_club_goals
+FROM us_soccer.mls.player_stats(season := 2025) AS p
+JOIN us_soccer.mls.standings(season := 2025) AS s USING (club_id)
+ORDER BY pct_of_club_goals DESC, p.player_name
+LIMIT 10;
+```
+
 ### Match detail
 
 Match functions take an `MLS-MAT-` id from `schedule()`:

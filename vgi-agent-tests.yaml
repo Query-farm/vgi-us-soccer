@@ -116,6 +116,36 @@ tasks:
     success_criteria: >-
       Uses asa.xg_players for 2025 with minimum_minutes 1500 and names Evander (FC Cincinnati).
 
+  - name: nwsl_2025_goal_share
+    check_sql: >-
+      SELECT arg_max(p.player_name, p.goals / s.goals_for) = 'Esther González'
+             AND arg_max(s.team_name, p.goals / s.goals_for) = 'Gotham FC'
+             AND arg_max(p.goals, p.goals / s.goals_for) = 13
+             AND arg_max(s.goals_for, p.goals / s.goals_for) = 35
+             AND count(*) FILTER (WHERE p.goals / s.goals_for >= 0.33) = 1
+      FROM us_soccer.nwsl.standings(season := 2025) s
+      JOIN us_soccer.nwsl.player_stats(season := 2025) p USING (team_id)
+    success_criteria: >-
+      Joins nwsl.standings and nwsl.player_stats for 2025 and names Esther González of Gotham FC,
+      13 of the team's 35 goals (about 37%).
+
+  - name: asa_2025_bargain_gplus
+    check_sql: >-
+      SELECT arg_max(g.player_name, g.goals_added_above_avg) = 'Alex Freeman'
+             AND arg_max(g.team_abbreviation, g.goals_added_above_avg) = 'ORL'
+             AND max(g.goals_added_above_avg) - 1 > max(g.goals_added_above_avg)
+                 FILTER (WHERE g.player_name <> 'Alex Freeman')
+      FROM us_soccer.asa.goals_added_players(season := 2025, minimum_minutes := 1500) g
+      JOIN (SELECT player_id, team_id, guaranteed_compensation
+            FROM us_soccer.asa.salaries(season := 2025)
+            QUALIFY release_date = max(release_date) OVER (PARTITION BY player_id, team_id)) p
+        USING (player_id, team_id)
+      WHERE p.guaranteed_compensation < 150000
+    success_criteria: >-
+      Joins asa.goals_added_players (minimum_minutes 1500) to the latest 2025 asa.salaries release,
+      keeps players under $150,000 guaranteed compensation, and names Alex Freeman (Orlando City)
+      with about 5.6 g+ above average.
+
   - name: asa_top_salary
     check_sql: >-
       SELECT

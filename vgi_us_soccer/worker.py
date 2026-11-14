@@ -10,17 +10,19 @@ from vgi import Worker
 from vgi.catalog import Catalog, ConstraintInfo, Schema, Table, constraint_record
 
 from vgi_us_soccer import asa, mls, nwsl
-from vgi_us_soccer.asa_functions import ASA_FUNCTIONS
+from vgi_us_soccer.asa_functions import ASA_FUNCTIONS, GPLUS_PER_SALARY_EXAMPLE
 from vgi_us_soccer.meta import column_comments
 from vgi_us_soccer.mls_functions import (
     MLS_FUNCTIONS,
+    PLAYER_GOAL_SHARE_EXAMPLE,
+    STARTER_BOX_SCORE_EXAMPLE,
     CompetitionsFunction,
     CurrentClubStatsFunction,
     CurrentPlayerStatsFunction,
     CurrentScheduleFunction,
     CurrentStandingsFunction,
 )
-from vgi_us_soccer.nwsl_functions import NWSL_FUNCTIONS
+from vgi_us_soccer.nwsl_functions import NWSL_FUNCTIONS, TOP_SCORER_BY_TEAM_EXAMPLE
 from vgi_us_soccer.nwsl_functions import CompetitionsFunction as NwslCompetitionsFunction
 from vgi_us_soccer.nwsl_functions import CurrentMatchesFunction as NwslCurrentMatchesFunction
 from vgi_us_soccer.nwsl_functions import CurrentPlayerStatsFunction as NwslCurrentPlayerStatsFunction
@@ -76,7 +78,7 @@ def _key_constraints(schema: str, table: str, key: tuple[str, ...]) -> tuple[Con
     return tuple(records)
 
 
-_MLS_STANDINGS_EXAMPLES = _examples(
+_MLS_STANDINGS_PAIRS = (
     (
         "The current Supporters' Shield table.",
         "SELECT position, club_name, games_played, points, goal_difference "
@@ -88,6 +90,7 @@ _MLS_STANDINGS_EXAMPLES = _examples(
         "FROM us_soccer.mls.current_standings ORDER BY goal_difference DESC LIMIT 5",
     ),
 )
+_MLS_STANDINGS_EXAMPLES = _examples(*_MLS_STANDINGS_PAIRS)
 
 _MLS_TABLES = [
     Table(
@@ -454,6 +457,21 @@ _AGENT_TEST_TASKS = json.dumps(
             ),
         },
         {
+            "name": "nwsl_2025_goal_share",
+            "prompt": (
+                "In the 2025 NWSL regular season, which player scored the largest share of her own team's "
+                "goals? Name the player and team, her goals, the team's goals, and the share."
+            ),
+        },
+        {
+            "name": "asa_2025_bargain_gplus",
+            "prompt": (
+                "Among 2025 MLS players with at least 1500 regular-season minutes whose guaranteed "
+                "compensation in the latest 2025 salary release was under $150,000, who had the highest "
+                "goals added (g+) above average according to American Soccer Analysis?"
+            ),
+        },
+        {
             "name": "asa_top_salary",
             "prompt": (
                 "Which MLS player had the highest guaranteed compensation in 2025, and what was his goals "
@@ -560,7 +578,9 @@ US_SOCCER_CATALOG = Catalog(
                     "table, such as `next_pro` or `leagues_cup`. Match functions take `MLS-MAT-` ids "
                     "from `schedule()`; `player_match_log()` takes `MLS-OBJ-` ids from `player_stats()`."
                 ),
-                "vgi.example_queries": _MLS_STANDINGS_EXAMPLES,
+                "vgi.example_queries": _examples(
+                    *_MLS_STANDINGS_PAIRS, PLAYER_GOAL_SHARE_EXAMPLE, STARTER_BOX_SCORE_EXAMPLE
+                ),
             },
             functions=MLS_FUNCTIONS,
             tables=_MLS_TABLES,
@@ -592,7 +612,8 @@ US_SOCCER_CATALOG = Catalog(
                         "The current NWSL table.",
                         "SELECT position, team_name, points FROM us_soccer.nwsl.current_standings "
                         "ORDER BY position",
-                    )
+                    ),
+                    TOP_SCORER_BY_TEAM_EXAMPLE,
                 ),
             },
             functions=NWSL_FUNCTIONS,
@@ -656,7 +677,8 @@ US_SOCCER_CATALOG = Catalog(
                         "2025 MLS teams by expected goal difference.",
                         "SELECT team_name, round(xgoal_difference, 1) AS xgd "
                         "FROM us_soccer.asa.xg_teams(season := 2025) ORDER BY xgd DESC",
-                    )
+                    ),
+                    GPLUS_PER_SALARY_EXAMPLE,
                 ),
             },
             functions=ASA_FUNCTIONS,

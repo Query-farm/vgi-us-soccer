@@ -170,6 +170,28 @@ def _meta_class(**kwargs: Any) -> type:
     return type("Meta", (), {"__doc__": "Function discovery metadata.", **_meta(**kwargs)})
 
 
+# Composed examples combine two of this schema's functions. Each is defined once here and listed both on
+# the function that drives the query and in the schema-level example list (see worker.py).
+PLAYER_GOAL_SHARE_EXAMPLE = (
+    "2025 MLS players who scored the largest share of their club's regular-season goals, joining "
+    "player_stats to the final standings.",
+    "SELECT p.player_name, p.club_abbreviation, p.goals, s.goals_for AS club_goals, "
+    "round(100.0 * p.goals / s.goals_for, 1) AS pct_of_club_goals "
+    "FROM us_soccer.mls.player_stats(season := 2025) AS p "
+    "JOIN us_soccer.mls.standings(season := 2025) AS s USING (club_id) "
+    "ORDER BY pct_of_club_goals DESC, p.player_name LIMIT 10",
+)
+STARTER_BOX_SCORE_EXAMPLE = (
+    "Minutes, shots, xG, and goals for every starter in MLS-MAT-0009NL, joining match_lineups to "
+    "match_player_stats.",
+    "SELECT l.club_abbreviation, l.shirt_number, l.player_name, s.minutes_played, s.shots, "
+    "round(s.xg, 2) AS xg, s.goals "
+    "FROM us_soccer.mls.match_lineups('MLS-MAT-0009NL') AS l "
+    "JOIN us_soccer.mls.match_player_stats('MLS-MAT-0009NL') AS s USING (player_id) "
+    "WHERE l.starter ORDER BY l.club_abbreviation, l.shirt_number",
+)
+
+
 # ------------------------------------------------------------------ reference
 
 
@@ -434,7 +456,8 @@ class PlayerStatsFunction(Scan, TableFunctionGenerator[SeasonArgs]):
                 "2025 MLS Golden Boot race.",
                 "SELECT player_name, club_abbreviation, goals, assists, round(xg, 1) AS xg "
                 "FROM us_soccer.mls.player_stats(season := 2025) ORDER BY goals DESC LIMIT 10",
-            )
+            ),
+            PLAYER_GOAL_SHARE_EXAMPLE,
         ],
     )
 
@@ -636,7 +659,8 @@ class MatchLineupsFunction(Scan, TableFunctionGenerator[MatchArgs]):
                 "SELECT team_role, shirt_number, player_name, lineup_position "
                 f"FROM us_soccer.mls.match_lineups({_MATCH_SQL}) WHERE starter "
                 "ORDER BY team_role, shirt_number",
-            )
+            ),
+            STARTER_BOX_SCORE_EXAMPLE,
         ],
     )
 

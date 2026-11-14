@@ -140,7 +140,7 @@ def test_catalog_discovery_contract_is_public_and_machine_readable() -> None:
     tasks = json.loads(US_SOCCER_CATALOG.tags["vgi.agent_test_tasks"])
     assert examples
     assert all({"name", "description", "sql", "expected_result"} <= example.keys() for example in examples)
-    assert 6 <= len(tasks) <= 10
+    assert 6 <= len(tasks) <= 12
     assert all(set(task) == {"name", "prompt"} for task in tasks)
     assert len({task["name"] for task in tasks}) == len(tasks)
 
@@ -159,3 +159,25 @@ def test_asa_objects_carry_the_cc_by_sa_licence() -> None:
     for function in SCHEMAS["asa"].functions:
         assert function.Meta.tags["vgi.license"] == "CC-BY-SA-4.0"
         assert "American Soccer Analysis" in function.Meta.tags["vgi.doc_llm"]
+
+
+@pytest.mark.parametrize(
+    ("schema", "function", "example"),
+    [
+        ("mls", mls_functions.PlayerStatsFunction, mls_functions.PLAYER_GOAL_SHARE_EXAMPLE),
+        ("mls", mls_functions.MatchLineupsFunction, mls_functions.STARTER_BOX_SCORE_EXAMPLE),
+        ("nwsl", nwsl_functions.StandingsFunction, nwsl_functions.TOP_SCORER_BY_TEAM_EXAMPLE),
+        ("asa", asa_functions.GoalsAddedFunction, asa_functions.GPLUS_PER_SALARY_EXAMPLE),
+    ],
+)
+def test_composed_examples_are_listed_on_the_schema_and_the_driving_function(
+    schema: str, function: type, example: tuple[str, str]
+) -> None:
+    description, sql = example
+    schema_examples = json.loads(SCHEMAS[schema].tags["vgi.example_queries"])
+    assert {"description": description, "sql": sql} in schema_examples
+    function_examples = json.loads(function.Meta.tags["vgi.example_queries"])[:5]
+    assert {"description": description, "sql": sql} in function_examples
+    assert [(e.description, e.sql) for e in function.Meta.examples][:5].count(example) == 1
+    for json_tag in (SCHEMAS[schema].tags["vgi.example_queries"], function.Meta.tags["vgi.example_queries"]):
+        assert len(json_tag) <= 8000

@@ -80,6 +80,23 @@ class SalaryArgs:
     season: Annotated[int | None, _SEASON]
 
 
+# A composed example joining two of this schema's functions. It is defined once here and listed both on
+# goals_added_players() and in the schema-level example list (see worker.py).
+GPLUS_PER_SALARY_EXAMPLE = (
+    "2025 MLS players with 1,500+ minutes ranked by goals added above average per US$1M of guaranteed "
+    "compensation, joining goals_added_players to each player's latest salaries() release.",
+    "WITH pay AS (SELECT player_id, team_id, guaranteed_compensation "
+    "FROM us_soccer.asa.salaries(season := 2025) "
+    "QUALIFY release_date = max(release_date) OVER (PARTITION BY player_id, team_id)) "
+    "SELECT g.player_name, g.team_abbreviation, round(g.goals_added_above_avg, 2) AS gplus, "
+    "p.guaranteed_compensation, "
+    "round(g.goals_added_above_avg / (p.guaranteed_compensation / 1e6), 2) AS gplus_per_million "
+    "FROM us_soccer.asa.goals_added_players(season := 2025, minimum_minutes := 1500) AS g "
+    "JOIN pay AS p USING (player_id, team_id) "
+    "ORDER BY gplus_per_million DESC LIMIT 10",
+)
+
+
 def _meta_class(
     *,
     name: str,
@@ -204,7 +221,8 @@ class GoalsAddedFunction(Scan, TableFunctionGenerator[PlayerArgs]):
                 "round(goals_added_above_avg, 2) AS gplus "
                 "FROM us_soccer.asa.goals_added_players(league := 'nwsl', season := 2025, "
                 "minimum_minutes := 1000) ORDER BY goals_added_above_avg DESC LIMIT 10",
-            )
+            ),
+            GPLUS_PER_SALARY_EXAMPLE,
         ],
     )
 

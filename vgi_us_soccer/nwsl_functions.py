@@ -179,6 +179,20 @@ class SeasonsFunction(Scan, TableFunctionGenerator[CompetitionArgs]):
         return nwsl.fetch_seasons(args.competition)
 
 
+# A composed example joining two of this schema's functions. It is defined once here and listed both on
+# standings() and in the schema-level example list (see worker.py).
+TOP_SCORER_BY_TEAM_EXAMPLE = (
+    "The final 2025 NWSL table with each team's leading scorer (ties broken by name) and her share "
+    "of the team's goals, joining standings to player_stats.",
+    "SELECT s.position, s.team_name, s.goals_for, p.player_name, p.goals, "
+    "round(100.0 * p.goals / s.goals_for, 1) AS pct_of_team_goals "
+    "FROM us_soccer.nwsl.standings(season := 2025) AS s "
+    "JOIN us_soccer.nwsl.player_stats(season := 2025) AS p USING (team_id) "
+    "QUALIFY row_number() OVER (PARTITION BY s.team_id ORDER BY p.goals DESC, p.player_name) = 1 "
+    "ORDER BY s.position",
+)
+
+
 @init_single_worker
 @bind_fixed_schema
 class StandingsFunction(Scan, TableFunctionGenerator[StandingsArgs]):
@@ -201,7 +215,8 @@ class StandingsFunction(Scan, TableFunctionGenerator[StandingsArgs]):
                 "The final 2025 NWSL table.",
                 "SELECT position, team_name, points, goal_difference "
                 "FROM us_soccer.nwsl.standings(season := 2025) ORDER BY position",
-            )
+            ),
+            TOP_SCORER_BY_TEAM_EXAMPLE,
         ],
     )
 
