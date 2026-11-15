@@ -1,6 +1,6 @@
 [project]
 name = "vgi-us-soccer"
-version = "0.2.0"
+version = "0.2.1"
 description = "A read-only VGI worker exposing MLS, NWSL, and American Soccer Analysis data to Haybarn SQL"
 readme = "README.md"
 license = "MIT"
