@@ -7,6 +7,8 @@ All notable changes to this project are documented here.
 ## 0.2.2 (2026-11-16)
 
 - Bump vgi-python to 0.52.2.
+- Requires Python 3.14 (CI, Docker image and tooling moved to 3.14).
+- CI runs the SQL tests over stdio, launch and HTTP transports.
 
 ## [0.2.1]
 
