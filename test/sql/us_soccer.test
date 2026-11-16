@@ -1,0 +1,75 @@
+# name: test/sql/us_soccer.test
+# description: Hermetic end-to-end coverage: every current table plus match, events and ASA xG,
+#   served from the recorded fixtures by test/mock_api/server.py (see ci/run-integration.sh).
+# group: [us_soccer]
+
+require vgi
+
+require-env VGI_US_SOCCER_WORKER
+
+require-env US_SOCCER_MLS_BASE_URL
+
+statement ok
+ATTACH 'us_soccer' (TYPE vgi, LOCATION '{VGI_US_SOCCER_WORKER}');
+
+query I
+SELECT count(*) FROM us_soccer.mls.current_standings;
+----
+4
+
+query I
+SELECT count(*) FROM us_soccer.mls.current_player_stats;
+----
+3
+
+query I
+SELECT count(*) FROM us_soccer.mls.current_club_stats;
+----
+3
+
+query I
+SELECT count(*) FROM us_soccer.mls.current_schedule;
+----
+4
+
+query I
+SELECT count(*) FROM us_soccer.mls.competitions;
+----
+19
+
+query I
+SELECT count(*) FROM us_soccer.nwsl.current_standings;
+----
+3
+
+query I
+SELECT count(*) FROM us_soccer.nwsl.current_player_stats;
+----
+3
+
+query I
+SELECT count(*) FROM us_soccer.nwsl.current_matches;
+----
+3
+
+query I
+SELECT count(*) FROM us_soccer.nwsl.competitions;
+----
+4
+
+query TIIT
+SELECT home_club_abbreviation, home_goals, away_goals, away_club_abbreviation FROM us_soccer.mls.match('MLS-MAT-0009NL');
+----
+CIN	0	2	CLB
+
+# The first two goals, in order.
+query T
+SELECT player_name FROM us_soccer.mls.match_events('MLS-MAT-0009NL') WHERE is_goal ORDER BY event_time LIMIT 2;
+----
+Gonzalo Tapia
+Taha Habroune
+
+query I
+SELECT count(*) FROM us_soccer.asa.xg_teams(season := 2026);
+----
+3

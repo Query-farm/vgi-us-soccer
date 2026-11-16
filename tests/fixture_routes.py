@@ -1,7 +1,7 @@
 """Map upstream request paths to the recorded responses in ``tests/fixtures``.
 
 The same routing serves the in-process ``httpx.MockTransport`` used by unit tests
-and the local HTTP server used by the hermetic Haybarn end-to-end test. Paths
+and the local HTTP server behind the SQL tests (test/mock_api/server.py). Paths
 are relative to each source's base URL.
 """
 
